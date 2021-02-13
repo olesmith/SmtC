@@ -1,0 +1,448 @@
+HTML *
+{
+	align: center;
+    background-color: #cceeff;
+    font-family: "Book Antiqua";
+}
+BODY
+{
+	align: center;
+    background-color: #cceeff;
+    font-family: "Book Antiqua";
+}
+UL,LI
+{
+	text-align: left;
+	vertical-align: bottom;
+}
+
+IMG.mySlides
+{
+	align: center;
+    background-color: #ffffff;
+}
+IMG
+{
+}
+
+.Date
+{
+	font-weight: Bold;
+	font-size: 12px;
+	font-style: italic;
+	text-decoration: none;
+	text-align: center;
+	color: grey;
+}
+.Command
+{
+	font-weight: None;
+	font-size: 16px;
+	font-style: none;
+	text-decoration: none;
+	text-align: right;
+	color: grey;
+}
+XMP,CODE,.Code
+{
+    font-family: Courier New, monospace;
+	font-weight: None;
+	font-size: 16px;
+	font-style: none;
+	text-decoration: none;
+	text-align: left;
+	color: grey;
+	background-color: white;
+    margin-top:    0px;
+    margin-bottom: 0px;
+    margin-right:  0px;
+    margin-left:   0px;
+}
+.Code_Title
+{
+	font-weight: None;
+	font-size: 10px;
+	font-style: italic;
+	text-decoration: none;
+	text-align: right;
+	color: black;
+	background-color: white;
+}
+.Output
+{
+    font-family: "Verdana, Geneva, sans-serif";
+	font-weight: None;
+	font-size: 20px;
+	font-style: none;
+	text-decoration: none;
+	text-align: left;
+	color: darkgrey;
+}
+.Phrase
+{
+    font-family: "Verdana, Geneva, sans-serif";
+	font-weight: None;
+	font-size: 14px;
+	font-style: none;
+	text-decoration: none;
+	text-align: left;
+	color: orange;
+}
+.Author
+{
+    font-variant: small-caps;
+    font-family: "Verdana, Geneva, sans-serif";
+	font-weight: Bold;
+	font-size: 14px;
+	font-style: Italic;
+	text-decoration: none;
+	text-align: right;
+	color: orange;
+}
+
+.Carousel_Cell
+{
+    background-color: white;
+	text-align: right;
+}
+.Carousel_Info_Text
+{
+	font-weight: Bold;
+	font-size: 12px;
+	font-style: none;
+	text-decoration: none;
+	text-align: right;
+	color: grey;
+}
+.Carousel_Navegation_Menu
+{
+	font-weight: Bold;
+	font-size: 16px;
+	font-style: none;
+	text-decoration: none;
+	text-align: center;
+	color: blue;
+    background-color: white;
+}
+.Carousel_Navegation_Active
+{
+	font-weight: Bold;
+	font-size: 16px;
+	font-style: none;
+	text-decoration: none;
+	text-align: center;
+	color: blue;
+    background-color: lightgray;
+}
+.FrameLinks
+{
+	font-weight: Bold;
+	font-size: 12px;
+	font-style: none;
+	text-decoration: none;
+	text-align: center;
+	color: blue;
+    background-color: lightgrey;
+}
+
+TD
+{
+	vertical-align: top;
+}
+.B
+{
+	font-weight: Bold;
+}
+.I
+{
+	font-style: Italic;
+}
+.U
+{
+	text-decoration: underline;
+}
+.Center
+{
+	text-align: center;
+}
+.Left
+{
+	text-align: left;
+}
+.Right
+{
+	text-align: right;
+}
+
+
+.H0
+{
+	font-size: 28px;
+  	color: DarkBlue;
+	text-decoration: None;
+	text-align: center;
+	font-weight: Bold;
+}
+H1, .H1
+{
+	font-size: 26px;
+  	color: DarkBlue;
+	text-decoration: None;
+	text-align: center;
+	font-weight: Bold;
+}
+H2, .H2
+{
+	font-size: 24px;
+  	color: DarkBlue;
+	text-decoration: None;
+	text-align: center;
+	font-weight: Bold;
+}
+H3, .H3
+{
+	font-size: 22px;
+	text-align: center;
+	font-weight: Bold;
+    color: DarkBlue;
+}
+H4, .H4
+{
+	font-size: 18px;
+  	color: DarkBlue;
+	text-decoration: None;
+	text-align: center;
+	font-weight: Bold;
+}
+H5,.H5
+{
+	font-size: 18px;
+  	color: DarkBlue;
+	text-decoration: None;
+	text-align: center;
+	font-weight: Bold;
+}
+.H6
+{
+	font-size: 16px;
+  	color: DarkBlue;
+	text-decoration: None;
+	text-align: center;
+	font-weight: Bold;
+}
+.H7
+{
+	font-size: 14px;
+  	color: DarkBlue;
+	text-decoration: None;
+	text-align: center;
+	font-weight: Bold;
+}
+.H8
+{
+	font-size: 12px;
+  	color: DarkBlue;
+	text-decoration: None;
+	text-align: center;
+	font-weight: Bold;
+}
+.H9
+{
+	font-size: 10px;
+  	color: DarkBlue;
+	text-decoration: None;
+	text-align: center;
+	font-weight: Bold;
+}
+.H10
+{
+	font-size: 8px;
+  	color: DarkBlue;
+	text-decoration: None;
+	text-align: center;
+	font-weight: Bold;
+}
+.Table_Frame
+{
+    border: 1px solid black;
+}
+
+
+.Body_Table
+{
+    border: 0px solid black;
+    border-collapse: collapse;
+}
+
+
+.Body_Center
+{
+    text-align: left;
+    border: 1px solid black;
+    width: 75%;
+}
+.Body_Left
+{
+	text-align: left;
+    width: 15%;
+}
+.Body_Right
+{
+	text-align: left;
+    width: 10%;
+}
+.Body_Top
+{
+	vertical-align: middle;
+    border: 1px solid black;
+}
+.Body_Middle
+{
+	vertical-align: top;
+    border: 1px solid black;
+}
+.Body_Bottom
+{
+	text-align: center;
+	vertical-align: top;
+    border: 1px solid black;
+}
+
+
+.FramesFrame
+{
+	text-align: center;
+}
+.AnimationFrame
+{
+	text-align: center;
+}
+.GeometryFrame
+{
+	text-align: center;
+}
+
+.Slide_Subtopic_Title
+{
+	font-size: 18px;
+  	color: grey;
+	text-decoration: underline;
+	text-align: left;
+	font-weight: Bold;
+}
+.Slide_Subtopic
+{
+	font-size: 16px;
+  	color: grey;
+	text-decoration: none;
+	text-align: left;
+	font-weight: none;
+}
+.Slide_Cell
+{
+    font-size: 20px;
+}
+
+.Slide_Navegator_Links
+{
+	font-weight: Bold;
+}
+.Slide_Navegator_Menu
+{
+	text-align: center;
+	font-size: 12px;
+}
+.Slide_Navegator_Menu
+{
+	text-align: center;
+	font-size: 12px;
+}
+.Search
+{
+	font-weight: None;
+	font-size: 10px;
+	font-style: none;
+	text-decoration: none;
+	text-align: left;
+	color: grey;
+}
+.Edit_Form
+{
+	font-weight: bold;
+	font-size: 10px;
+	font-style: none;
+	text-decoration: none;
+	text-align: left;
+	color: grey;
+}
+.Edit_Input
+{
+	color: black;
+}
+.Edit_Doc_Options
+{
+    font-family: "Courier New";
+	font-size: 10px;
+	background-color: lightgrey;
+}
+.Edit_Doc_Class
+{
+    font-family: "Courier New";
+	font-size: 10px;
+	background-color: lightgrey;
+}
+..Edit_Limiter
+{
+	font-weight: none;
+	font-size: 10px;
+	font-style: none;
+	text-decoration: none;
+}
+.Edit_Limiter_Left
+{
+	text-align: right;
+}
+.Edit_Limiter_Right
+{
+	text-align: left;
+}
+.Edit_Doc_PreAmble_Input
+{
+    font-family: "Courier New";
+	background-color: lightgrey;
+	font-size: 10px;
+	text-align: left;
+	background-color: lightgrey;
+}
+.Edit_Doc_PreAmble_Div
+{
+	font-size: 6px;
+	text-align: center;
+}
+.Edit_Doc_PostAmble_Div
+{
+	font-size: 10px;
+	text-align: center;
+}
+
+
+.Edit_Doc_Body_Input
+{
+	font-size: 10px;
+	text-align: left;
+	background-color: lightgrey;
+    font-family: "Courier New";
+
+}
+.Edit_Doc_Body_Div
+{
+	font-size: 12px;
+	text-align: center;
+}
+.Edit_Doc_Buttons
+{
+	font-size: 12px;
+	text-align: center;
+	font-size: 12px;
+	background-color: lightgrey;
+}

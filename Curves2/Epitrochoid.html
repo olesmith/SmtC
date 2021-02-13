@@ -1,0 +1,124 @@
+<H1>Circle, radius r, rolling outside fixed circle, radius R</H1>
+<UL>
+  <LI>
+    Unit Vectors:
+    <LATEX>
+      \input{/usr/local/Python/curves/Latex/Formulas/Vectors/ef/e.tex},
+      \qquad
+      \input{/usr/local/Python/curves/Latex/Formulas/Vectors/ef/f.tex}
+    </LATEX>
+    <UL>
+      <LI>
+        <LATEX>
+          \input{/usr/local/Python/curves/Latex/Formulas/Vectors/ef/en.tex},
+          \qquad
+          \input{/usr/local/Python/curves/Latex/Formulas/Vectors/ef/fn.tex}
+         </LATEX>
+      </LI>
+      <LI>
+        <LATEX>
+         \underline{e}'(t)=\underline{f}(t),
+          \qquad
+          \underline{f}'(t)=-\underline{e}(t)
+         </LATEX>
+      </LI>
+      <LI>
+        <LATEX>
+         \underline{e}_w(t)=\underline{e}(\omega t},
+          \qquad
+           \underline{f}_w(t)=\underline{f}(\omega t}
+         </LATEX>
+      </LI>
+      <LI>
+        <LATEX>
+         \underline{e}_w(t) \cdot \underline{e}(\omega t})=
+         \underline{f}_w(t) \cdot \underline{f}(\omega t})=
+         \cos( (\omega-1)t)
+         </LATEX>
+      </LI>
+    </UL>
+  </LI>
+  <LI>
+    Epitrochoids:
+    <LATEX>
+      \underline{r}(t)=
+        r
+        \left( \begin{array}{c}
+        \omega \cos{t}-\lambda\cos{\omega t}\\
+        \omega \sin{t}-\lambda\sin{\omega t}\\
+      \end{array} \right)=
+      r\left\{
+      \input{/usr/local/Python/curves/Latex/Formulas/Epitrochoid/R.tex}
+      \right\},
+      \quad t \in \mathbb{R}
+    </LATEX>
+  </LI>
+  <LI>
+    Epicycloid:
+    <LATEX>
+      \underline{r}(t)=
+        r
+        \left( \begin{array}{c}
+        \omega \cos{t}-\cos{\omega t}\\
+        \omega \sin{t}-\sin{\omega t}\\
+      \end{array} \right)
+    </LATEX>
+  </LI>
+  <LI>
+    Dimensionless:
+    <LATEX>
+      \omega=\frac{R+r}{r}>0,
+      \qquad
+      \lambda=\frac{b+r}{r}
+      \in \mathbb{R}
+  </LATEX></LI>
+  <LI>Canonical: r=1</LI>
+  <LI>
+    Derivative:
+    <LATEX>
+      \underline{r}'(t)=
+      \input{/usr/local/Python/curves/Latex/Formulas/Epitrochoid/v.tex}
+    </LATEX>
+    <UL>
+      <LI>
+        Irregular:
+        <LATEX>
+          \underline{r}'(t)=\underline{0}
+          \quad \Rightarrow \quad
+          \lambda= \pm 1
+        </LATEX>
+      </LI>
+      <LI>Cycloids!</LI>
+      <LI>
+        Velocity:
+        <LATEX>
+          v(t)=
+          \input{/usr/local/Python/curves/Latex/Formulas/Epitrochoid/v2.tex}
+        </LATEX>
+      </LI>
+      <LI>
+        Normal:
+        <LATEX>
+          \widehat{\underline{r}}'(t)==
+          \input{/usr/local/Python/curves/Latex/Formulas/Epitrochoid/v_n.tex}
+        </LATEX>
+      </LI>
+    </UL>
+  </LI>
+  <LI>
+    2nd Derivative:
+    <LATEX>
+      \underline{r}''(t)=
+      \input{/usr/local/Python/curves/Latex/Formulas/Epitrochoid/a.tex}
+    </LATEX>
+  </LI>  
+  <LI>
+    Determinant:
+    <LATEX>
+      D(t)=
+      \widehat{\underline{r}}'(t) \cdot \underline{r}''(t)
+      =
+      \input{/usr/local/Python/curves/Latex/Formulas/Epitrochoid/D.tex}
+    </LATEX>
+  </LI>  
+</UL>

@@ -1,0 +1,119 @@
+ Consider a parametrized curve in an oriented coordinate system, $(O,\Vector{i},\Vector{j})$:
+ 
+ \[
+  \Vector{r}(t)=
+  \begin{pmatrix}
+   x(t)\\y(t)
+  \end{pmatrix},
+ \]
+
+ with $t$ in some interval, $I \subset \mathbb{R}$. We will assume that the functions $x(t)$ and $y(t)$ are two times
+ diferentiable in $I$, ensuring the existence of the \emph{velocity}, $\Vector{v}(t)$, and \emph{acceleration}, $\Vector{a}(t)$, vectors:
+ 
+ \[
+  \Vector{v}(t)=
+  \Vector{r}'(t)=
+  \begin{pmatrix}
+   x'(t)\\y'(t)
+  \end{pmatrix},
+  \qquad \qquad
+  \Vector{a}(t)=
+  \Vector{r}''(t)=
+  \begin{pmatrix}
+   x''(t)\\y''(t)
+  \end{pmatrix}
+ \]
+
+%%\input{Introduction/Taylor}
+ 
+The (scalar) velocity is given by:
+
+\[
+ v(t)=|\Vector{r}'(t)|=\sqrt{x'^2+y'^2}
+\]
+
+ A point of the curve where: $v(t) \neq 0$ is said to be \emph{regular}, in such a point we defined
+ the unit tangent vector:
+ 
+ \[
+  \Vector{t}(t)=
+  \frac{ \Vector{r}'(t) }{ |\Vector{r}'(t)| }
+  =
+  \frac{1
+  }
+  { \sqrt{ x'^2+y'^2} }
+  \begin{pmatrix}
+   x'\\y'
+  \end{pmatrix},
+ \]
+ 
+ as well as it's positive normal:
+ 
+ \[
+  \Vector{n}(t)=
+  \Vector{\widehat{t}}(t)=
+  \frac{
+  1
+  }
+  { \sqrt{ x'^2+y'^2} }
+  \begin{pmatrix}
+   -y'\\x'
+  \end{pmatrix}
+  \]
+
+  Before we continue, we note that for a vector function of fixed length: $\Vector{a}(t) \cdot \Vector{a}(t)=l^2$,
+  it's derivative is always perpendicular to itself:
+  
+  \[
+   \Vector{a}(t) \cdot \Vector{a}'(t)=0
+  \]
+
+  In the following, we shall also need the unity vectors:
+  
+  \[
+   \Vector{e}(t)=
+  \begin{pmatrix}
+   \cos{t}\\\sin{t}
+  \end{pmatrix},
+  \qquad 
+   \Vector{f}(t)=
+  \begin{pmatrix}
+   -\sin{t}\\\cos{t}
+  \end{pmatrix};
+  \qquad   \qquad   
+  \Vector{p}(t)=
+  \begin{pmatrix}
+   \sin{t}\\\cos{t}
+  \end{pmatrix},
+  \qquad
+   \Vector{q}(t)=
+  \begin{pmatrix}
+   \cos{t}\\-\sin{t}
+  \end{pmatrix}
+  \]
+
+Note that:
+
+\[
+ \Vector{ \widehat{e} }(t) =\Vector{f}(t),
+ \qquad 
+ \Vector{\widehat{f}}(t)=-\Vector{e}(t);
+ \qquad \qquad
+ \Vector{ \widehat{p} }(t) =\Vector{q}(t),
+ \qquad 
+ \Vector{\widehat{q}}(t)=-\Vector{p}(t)
+\]
+
+and:
+
+\[
+ \Vector{e}'(t) =\Vector{f}(t),
+ \qquad 
+ \Vector{f}'(t)=-\Vector{e}(t);
+ \qquad \qquad
+ \Vector{p}'(t) =-\Vector{q}(t),
+ \qquad
+ \Vector{q}'(t)=-\Vector{p}(t)
+\]
+
+

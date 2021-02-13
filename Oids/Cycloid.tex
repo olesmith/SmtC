@@ -1,0 +1,450 @@
+Letting a circle of ratio $a$ roll on the $x$-axis, results in a curve,
+called a Cycloid.
+
+\begin{Definition}
+  \textbf{Cycloids}.
+  
+By a Cycloid, with ratio $a$ and phase $\gamma$,
+$C(a,\gamma)$, we understand 
+the curve parametrisized by:
+\[
+ \Vector{r}(t)
+  =
+  at\Vector{i}+a\Vector{j}
+  -a \Vector{p}(t+\gamma)
+\]
+
+The Cycloid $C(1,-\pi/3)$ is shown in Fig. \ref{fig:cycloid}.
+\end{Definition}
+
+
+\Figure
+{Trochoids/Cycloid.png}
+{Cycloid}
+{
+  The Cycloid $C(1,-\pi/3)$, (grey curve).
+  Included is, calculated using numerical derivation:
+  the Cycloid's evolute (orange curve),
+  the curvature vecor (magenta), the osculating circle (green)
+  as well as the coordinate systems: World (white), rolling circle (red)
+  and the accompanying, $(\Vector{r},\Vector{t},\Vector{n})$ (yellow).
+  In the figures to follow, we shall adopt this colouration scheme.
+}
+{fig:cycloid}
+
+Fig. \ref{fig:cycloid} seems to indicate, that:  The Evolute of the Cycloid,
+is another Cycloid. We shall prove this in the remainder of this section.
+
+
+   Scaling the rolling vector, $b\Vector{p}(t)$, $b \in \mathbb{R}$,
+   we obtain another curve, called
+   a Trochoid. As for the Cycloid,  we allow for a phase, $\gamma$, 
+   thus parametrizising:
+   
+
+\begin{Definition}
+  \textbf{Trochoids}.
+  
+   By a $\gamma$-fased Trochoid, $T(a,b,\gamma)$, we understand the curve
+   parameterized by:
+   
+\[
+  \Vector{r}(t)
+ =
+  \begin{pmatrix}
+   x(t)\\y(t)
+  \end{pmatrix}
+  =
+  \begin{pmatrix}
+   at-b\sin{(t+\gamma)}\\a-b\cos{(t+\gamma)}
+  \end{pmatrix}
+  =
+  \]
+  \[
+  a
+  \begin{pmatrix}
+   t\\1
+  \end{pmatrix}
+   -
+   b
+  \begin{pmatrix}
+  \sin{(t+\gamma)}\\\cos{(t+\gamma)}
+  \end{pmatrix}
+ =
+ \]
+ \[
+  at\Vector{i}+a\Vector{j}
+  -b \Vector{p}(t+\gamma)
+\]
+\end{Definition}
+
+\Figure
+{Trochoids/Trochoid_0-5.png}
+{Trochoid}
+{
+  The Cycloid $T(1,0.5,-\pi/3)$
+}
+{fig:trochoid}
+
+
+
+
+
+The Trochoid $T(a,-a,\gamma)$, is a rephased Cycloid: $C(a,\gamma+\pi)$.
+Omitting the phase parameter, we assume it $0$: $T(a,b)=T(a,b,0)$
+and $C(a)=C(a,\gamma)$.
+Before continuing, we note that the vector $\Vector{p}(t)$, behaves similarly
+to the vectors $\Vector{e}$ and $\Vector{f}$ in the previous section. 
+It's orthogonal complement, $\Vector{q}$, is:
+\[
+  \Vector{q}(t)
+  =
+  \begin{pmatrix}
+   -\cos{t}\\\sin{t}
+  \end{pmatrix}
+\]
+
+Omitting the tedious parameter, $t$, clearly: 
+$\Vector{\widehat{q}}=-\Vector{p}$, and for the derivatives:
+\[
+ \Vector{p}'
+ =
+ -\Vector{q},
+ \qquad \qquad
+ \Vector{q}'
+ =
+ \Vector{p}
+\]
+
+Considering the family of Trochoids, we shall calculate the curvature, $\kappa(t)$,
+the curvature radius, $\rho(t)$, as well as the curvature vector,
+$\rho \Vector{n}$
+and the parametrization of the Trochoid evolute, 
+$\Vector{c}=\Vector{r}+\rho \Vector{n}$. In fact, we will show that
+the evolute of a Cycloid, is a translated Cycloid, whereas this is \emph{not}
+the case for the general Trochoid, $b \neq 0$.
+
+Deriving once:
+
+\[
+ \Vector{r}'
+ =
+ a \Vector{i}
+ +
+ b \Vector{q}
+\]
+
+Note, that $\Vector{r}'(t)=0$, implies 
+$\sin{t}=0$, that is: $t=p \pi, ~  p \in \mathbb{Z}$.
+This satisfied, $\cos{p \pi}=(-1)^p=-a/b$. That is,
+for $b=a$ (the Cycloid), the irregular points
+are at $t=(2n+1)\pi$. In the case
+$b=-a$, which is another Cycloid, the irregular points
+are at $t=2n \pi$. In the case of a 'true' Trochoid, $b \neq \pm a$, all points
+are regular.
+
+The second derivative is:
+\[
+ \Vector{r}''
+ =
+ b \Vector{p}
+\]
+
+Taking the orthogonal complement of the derivate:
+\[
+ \Vector{ \widehat{r} }'
+ =
+ a \Vector{j}
+ -
+ b \Vector{p}
+\]
+
+
+For the determinant:
+\[
+ D(t)
+ =
+ \Vector{ \widehat{r} }'(t) \cdot \Vector{ r}''(t)
+ =
+ \left(
+    a \Vector{j}
+    -
+    b \Vector{p}
+ \right)
+ \cdot
+ b \Vector{p}
+  =
+\]
+\[
+ ab~
+ \Vector{j} \cdot \Vector{p}
+ -
+ b^2
+ =
+ b \left(
+   a \cos{t}-b
+ \right)
+\]
+
+Investigating, $D(t)=0$:
+\[
+ a \cos{t}
+ =
+ b
+ \quad \Leftrightarrow \quad
+ \cos{t}
+ =
+ \frac{b}{a},
+\]
+
+Thus $D(t)$ has has two roots (counting multiplicity), if and only
+if, $b \in [-a,a]$, given by:
+\[
+ \delta_1 = \Arccos{ \left( \frac{b}{a} \right) }
+ \qquad \qquad
+ \delta_2 = \pi-\delta_1
+\]
+
+This leads us to suspect to see diferent Trochoid curvature behaviour, 
+in the cases: 
+
+\begin{enumerate}
+ \item $|b|>a$: $D(t)$ has fixed sign; Type 1 Trochoids.
+ \item $|b|=a$: $D(t)$ has a zero, but does not change sign. 
+ Cycloids or degenerated Trochoids.
+ \item $|b|>a$: $D(t)$ changes sign twice; Type 2 Trochoids.
+\end{enumerate}
+
+Calculating the squared velocity:
+
+\[
+ \Vector{ r }' \cdot \Vector{ r }'
+ =
+ \left(
+    a \Vector{i}
+    +
+    b \Vector{q}
+  \right)
+  \cdot
+  \left(
+    a \Vector{i}
+    +
+    b \Vector{q}
+  \right)
+  =
+\]
+\[
+ a^2+b^2
+ +2ab \Vector{i} \cdot \Vector{q}
+ =
+ a^2+b^2-2ab \cos{t}
+\]
+
+The Trochoid curvature is:
+
+\[
+ \kappa(t)
+ =
+ \frac{D(t)}{ |\Vector{r}'(t)|^3}
+ =
+ \frac{ b \left(
+   a \cos{t}-b
+ \right)
+ }
+ {
+ (a^2+b^2-2ab \cos{t})^{3/2}
+ }
+\]
+
+For the ratio:
+
+\[
+ \nu(t)
+ =
+ \frac{ |\Vector{r}'(t)|^2}{D(t)}
+ =
+ \frac{ 
+    a^2+b^2-2ab \cos{t}
+ }
+ {
+   b \left(
+   a \cos{t}-b
+ \right)
+ }
+\]
+
+Therefore, the curvature vector, $\rho \Vector{n}$, is:
+
+\[
+ \rho \Vector{n}
+ =
+ \nu(t) \Vector{ \widehat{r} }'
+ =
+ \frac{ 
+    a^2+b^2-2ab \cos{t}
+ }
+ {
+   b \left(
+   a \cos{t}-b
+ \right)
+ }
+ \left(
+    a \Vector{j}
+    -
+    b \Vector{p}
+ \right)
+\]
+
+Thus, we obtain for the Trochoid evolute:
+\[
+ \Vector{c}(t)
+ =
+ \Vector{r}(t)+\rho \Vector{n}(t)
+ =
+ at\Vector{i}+a\Vector{j}
+  -b \Vector{p}
+  +
+ \nu(t)
+ \left(
+    a \Vector{j}
+    -
+    b \Vector{p}
+ \right)
+ =
+  at\Vector{i}
+  +
+  (1+\nu(t))
+  \left(
+    a \Vector{j}
+    -
+    b \Vector{p}
+ \right)
+\]
+
+We observe the common factor:
+\[
+ 1+\nu(t)
+ =
+ 1+
+ \frac{ 
+    a^2+b^2-2ab \cos{t}
+ }
+ {
+   b \left(
+   a \cos{t}-b
+ \right)
+ }
+ =
+ \]
+ \[
+\frac{ 
+    a^2+b^2-2ab \cos{t}+ba \cos{t}-b^2
+ }
+ {
+   b \left(
+   a \cos{t}-b
+ \right)
+ }
+ =
+ \frac{ 
+    a^2-ab \cos{t}
+ }
+ {
+   b \left(
+   a \cos{t}-b
+ \right)
+ }
+ =
+ -\frac{a}{b}
+ \cdot
+ \frac{ 
+    a-b \cos{t}
+ }
+ {
+   b-a \cos{t}
+ }
+\]
+
+Finally we may write the Trochoid evolute:
+\[
+  \Vector{c}(t)
+ = 
+ at\Vector{i}
+ -
+ \frac{a}{b}
+ \cdot
+ \frac{ 
+    a-b \cos{t}
+ }
+ {
+   b-a \cos{t}
+ }
+ \left(
+    a \Vector{j}
+    -
+    b \Vector{p}
+ \right)
+\]
+
+For this curve to be another Trochoid, the appearing factor should be constant:
+\[
+ \varphi(t)
+ =
+ \frac{ 
+    a-b \cos{t}
+ }
+ {
+   b-a \cos{t}
+ }
+\]
+
+Deriving:
+\[
+ \varphi'(t)
+ =
+ \frac{ b \cos{t}- a \cos{t} }
+ { (b-a \cos{t})^2}
+ =
+ \frac{ (b-a)\cos{t} }{ (b-a \cos{t})^2 }
+ =
+ 0
+\]
+
+Which is satisifed, if and only if, $a=b$, being the special case of a Cycloid, $b=a$
+obtaining the Cycloid evolute:
+\[
+  \Vector{c}(t)
+  =
+  at\Vector{i}
+  -
+   \frac{ 
+    1- \cos{t}
+ }
+ {
+   1- \cos{t}
+ }
+ \left(
+    a \Vector{j}
+    -
+    a \Vector{p}
+ \right)
+ =
+   at\Vector{i}
+  -
+ \left(
+    a \Vector{j}
+    -
+    a \Vector{p}
+ \right)
+\]
+
+This is a translated Cycloid, with the same half-axis
+and the phase $\pi$ \emph{ahead} of the original. 
+We state this in a theorem:
+
+\begin{Theorem}
+ The evolute of the Cycloid $C(a)$ is the translated Cycloid $\Vector{R}_0 + C(a,\pi)$,
+ whereas the evolute of a 'true' Trochoid $T(a,b)$ is \emph{not} a Trochoid.
+\end{Theorem}
+
+

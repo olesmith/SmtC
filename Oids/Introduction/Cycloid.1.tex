@@ -1,0 +1,61 @@
+
+ \Example[Cycloids]{
+ Rolling a circle of ratio $r$ on the $x$-axis, results in a curve called a Cycloid,
+ parameterized by:
+ 
+ \[
+ \Vector{r}(t)
+ =
+  \begin{pmatrix}
+   x(t)\\y(t)
+  \end{pmatrix}
+  =
+  \begin{pmatrix}
+   a(t-\cos{t})\\a(1- \sin{t})
+  \end{pmatrix},
+  \qquad
+  t \in [-\pi,\pi]
+ \]
+ 
+ Convinientely, we write:
+ 
+ \[
+ \Vector{r}(t)
+ =
+   t
+   \begin{pmatrix}
+   a\\-1
+  \end{pmatrix}
+  -
+  a \Vector{e}
+ \]
+
+ Deriving once:
+ 
+ \[
+   \Vector{r}'(t)
+ =
+   a 
+   (
+   \Vector{i}
+    -
+    \Vector{f}
+   )
+ \]
+ We observe, that the Cycloid is regular ($\Vector{r}'(t) \neq \Vector{0}$), 
+ in all points, except:
+ 
+ \[
+  t=\frac{\pi}{2} +2 p \pi, \quad p \in \mathbb{Z}
+ \]
+ 
+ For completeness:
+ 
+ \[
+  \Vector{r}''(t)
+ =
+ a \Vector{e}
+ \]
+ }
+ 
+ 

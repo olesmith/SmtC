@@ -1,0 +1,83 @@
+
+As may found in any textbook on Diferential Geometry, the \emph{Curvature} of a curve, in
+a regular point, is the function:
+
+\[
+ \kappa=\kappa(t)
+ =
+ \frac{ \left[ \Vector{r}'(t) \times \Vector{r}''(t)\right] }{ |\Vector{r}'(t)|^3}
+ =
+ \frac{ x'y''-x''y' }{ |\Vector{r}'(t)|^3}
+\]
+
+In the following we denote:
+
+\[
+ D(t)=
+ x'y''-x''y
+ =
+ \left[ \Vector{r}'(t) \times \Vector{r}''(t)\right]
+ =
+ \Vector{ \widehat{r} }'(t) \cdot \Vector{ r}''(t)
+\]
+
+Geometrically, the value of $D(t)$ is the (signed) area of the parallellogram
+spanned by $\Vector{r}'$ and $\Vector{r}''$.
+Moreover, $D(t)=0$, is equivalente to
+$\Vector{r}'$ and $\Vector{r}''$ being linearly dependent. In the case of
+
+In points where $\kappa(t) \neq 0$, the curvature ratio is given by: $\rho(t)=\frac{1}{\kappa(t)}$,
+and the curvature vector is:
+
+
+\[
+\Vector{\rho}(t)
+=
+ \rho \Vector{n}
+ =
+ \frac 
+ {
+  |\Vector{r}'(t)|^3
+  }
+  {
+    D(t)
+  }
+  \cdot 
+  \frac{ \Vector{\widehat{r}}'(t)  }{ |\Vector{r}'(t)| }
+  =
+ \frac 
+ {
+  |\Vector{r}'(t)|^2
+  }
+  {
+    D(t)
+  }
+  ~
+  \Vector{\widehat{r} }'(t)
+  =
+  \nu(t) \Vector{\widehat{r} }'(t),
+\]
+
+where we have introduced the quantity:
+\[
+ \nu(t)=
+ \frac 
+ {
+  |\Vector{r}'(t)|^2
+  }
+  {
+    D(t)
+  }
+\]
+
+
+Finally, the formula for calculating the \emph{Center of Curvature}, is:
+
+\[
+ \Vector{c}(t)
+ =
+ \Vector{r}(t)+\rho \Vector{n}
+\]
+
+The curve traced by the centers of curvature, is termed the curve's \emph{Evolute}. In the following,
+we will calculate the evolute for some curve families.

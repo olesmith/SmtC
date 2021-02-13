@@ -1,0 +1,59 @@
+
+ By \textbf{Taylors Formula}, we have for $t,t_0 \in I$:
+ 
+ \begin{equation}
+ \label{eq:taylor:n}
+  \Vector{r}(t)
+  =
+  \Vector{r}(t_0)
+  +
+  \Vector{r}'(t_0)(t-t_0)
+  +
+  \ldots+
+  \frac{1}{n!} \Vector{r}^{(n)}(t_0)(t-t_0)^n
+  +
+  \Vector{\epsilon}_n(t)
+ \end{equation}
+ 
+ In fact, Taylors Formula ensures, that for $t>t_0$, $\exists \xi \in [t_0,t]$, so that:
+ 
+ \[
+   |\Vector{\epsilon}_n(t)|
+   \leq 
+   \frac{1}{(n+1)!}
+   |\Vector{r}^{(n+1)}(\xi)|(t-t_0)^{n+1}
+ \]
+ 
+Hence, for the \emph{Error Vector}, $\Vector{\epsilon}(t)$, we have:
+ 
+\begin{equation}
+  \lim_{t\rightarrow t_0} \frac{\Vector{\epsilon}_n(t)}{ (t-t_0)^n }
+ \label{eq:taylor:err:n}
+  =
+  \Vector{0}
+\end{equation}
+ 
+\subsection{First Order Aproximation}
+input{Introduction/First}
+Deriving:
+
+\[
+ v(t)=\sqrt{ x'(t)^2+y'(t)^2},
+\]
+
+we observe:
+
+\[
+  v'(t)
+  =
+  \frac{x'(t)+y'(t)}{ \sqrt{ x'(t)^2+y'(t)^2} }
+  =
+  \frac{x'(t)+y'(t)}{ v }
+\]
+
+
+\subsection{Second Order Aproximation}
+\input{Introduction/Second}
+ 
+
+ 

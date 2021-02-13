@@ -1,0 +1,303 @@
+/** World coordinate system **/
+.BackGround {
+    color: black;
+    stroke: black;
+    fill: black;
+    visibility: visible;
+}
+
+
+.IterationText {
+    color: blue;
+    stroke: blue;
+    fill: blue;
+    visibility: visible;
+}
+.WCS {
+    color: black;
+    stroke: black;
+    fill: black;
+    visibility: visible;
+}
+
+.ACS {
+    color: blue;
+    stroke: blue;
+    fill: blue;
+    visibility: visible;
+}
+/** Base curves **/
+
+.Base_Mesh {
+    color: black;
+    stroke: black;
+    fill: black;
+    visibility: hidden;
+}
+.Base_Conn {
+    color: black;
+    stroke: black;
+    fill: none;
+    stroke-width: 2;
+}
+.Base_Last {
+    color: black;
+    stroke: black;
+    fill: black;
+    stroke-width: 2;
+}
+.Base_Text {
+    color: black;
+    stroke: black;
+    fill: none;
+    stroke-width: 2;
+    visibility: hidden;
+}
+
+/** Main curves, r(t) **/
+
+.Curve_Mesh {
+    color: darkblue;
+    stroke: darkblue;
+    fill: darkblue;
+    visibility: hidden;
+}
+.Curve_Conn {
+    color: blue;
+    stroke: blue;
+    fill: none;
+    stroke-width: 3;
+}
+.Curve_Conn_Last {
+    color: blue;
+    stroke: blue;
+    fill: none;
+    stroke-width: 1;
+}
+.Curve_Last {
+    color: blue;
+    stroke: blue;
+    fill: blue;
+    stroke-width: 2;
+}
+.Curve_Text {
+    color: blue;
+    stroke: blue;
+    fill: none;
+    stroke-width: 2;
+    visibility: hidden;
+}
+
+.Curve_Velocity {
+    color: white;
+    stroke: white;
+    fill: white;
+    visibility: visible;
+}
+
+.Curve_Acceleration {
+    color: white;
+    stroke: white;
+    fill: white;
+    visibility: visible;
+}
+
+.Curve_Osculating {
+    color: green;
+    stroke: green;
+    fill: none;
+    visibility: visible;
+    stroke-width: 1;
+}
+
+.Curve_Osculating_Vector {
+    color: green;
+    stroke: green;
+    fill: none;
+    visibility: visible;
+    stroke-width: 1;
+}
+
+/** Numerical Evolutes, r(t) **/
+
+.Numerical_Evolute_Mesh {
+    color: orange;
+    stroke: orange;
+    fill: white;
+    visibility: hidden;
+}
+.Numerical_Evolute_Conn {
+    color: orange;
+    stroke: orange;
+    fill: none;
+    stroke-width: 3;
+}
+.Numerical_Evolute_Conn_Last {
+    color: darkorange;
+    stroke: darkorange;
+    fill: none;
+    stroke-width: 1;
+}
+.Numerical_Evolute_Last {
+    color: orange;
+    stroke: orange;
+    fill: orange;
+    visibility: visible;
+}
+.Numerical_Evolute_Text {
+    color: orange;
+    stroke: orange;
+    fill: orange;
+    stroke-width: 2;
+    visibility: hidden;
+}
+
+
+/** Analytical Evolutes, r(t) **/
+
+.Analytical_Evolute_Mesh {
+    color: red;
+    stroke: red;
+    fill: red;
+    visibility: visible;
+}
+.Analytical_Evolute_Conn {
+    color: red;
+    stroke: red;
+    fill: red;
+    stroke-width: 2;
+    visibility: visible;
+}
+.Analytical_Evolute_Conn_Last {
+    color: red;
+    stroke: red;
+    fill: none;
+    stroke-width: 2;
+    visibility: visible;
+}
+.Analytical_Evolute_Last {
+    color: red;
+    stroke: red;
+    fill: red;
+    visibility: visible;
+}
+.Analytical_Evolute_Text {
+    color: red;
+    stroke: red;
+    fill: red;
+    stroke-width: 2;
+    visibility: hidden;
+}
+
+/** Parallel Curves **/
+
+.Parallel_Mesh {
+    color: white;
+    stroke: white;
+    fill: white;
+    visibility: hidden;
+}
+.Parallel_Conn {
+    color: red;
+    stroke: red;
+    fill: none;
+    stroke-width: 2;
+}
+.Parallel_Conn_Last {
+    color: magenta;
+    stroke: magenta;
+    fill: none;
+    stroke-width: 2;
+}
+.Parallel_Last {
+    color: red;
+    stroke: red;
+    fill: none;
+    stroke-width: 2;
+}
+.Parallel_Text {
+    color: red;
+    stroke: red;
+    fill: none;
+    stroke-width: 2;
+    visibility: hidden;
+}
+
+
+/** Rolloids **/
+
+.Roulette_Mesh {
+    color: red;
+    stroke: red;
+    fill: red;
+    visibility: visible;
+}
+.Roulette_Conn {
+    color: red;
+    stroke: red;
+    fill: none;
+    stroke-width: 2;
+}
+.Roulette_Conn_Last {
+    color: magenta;
+    stroke: magenta;
+    fill: none;
+    stroke-width: 2;
+}
+.Roulette_Last {
+    color: red;
+    stroke: red;
+    fill: red;
+    stroke-width: 2;
+}
+.Roulette_Text {
+    color: red;
+    stroke: red;
+    fill: none;
+    stroke-width: 2;
+    visibility: hidden;
+}
+
+
+.Roulette_Arc_Rolled {
+    color: blue;
+    stroke: blue;
+    fill: none;
+    stroke-width: 2;
+    visibility: visible;
+}
+.Roulette_Arc_Unrolled {
+    color: blue;
+    stroke: blue;
+    fill: none;
+    stroke-width: 1;
+    visibility: visible;
+}
+.Rolling_CS {
+    color: blue;
+    stroke: blue;
+    fill: blue;
+    stroke-width: 1;
+    visibility: visible;
+}
+.Rolling_Center {
+    color: blue;
+    stroke: blue;
+    fill: blue;
+    stroke-width: 2;
+    visibility: visible;
+}
+.Roulette_CS {
+    color: brown;
+    stroke: brown;
+    fill: brown;
+    stroke-width: 2;
+    visibility: visible;
+}
+.Rolling_Fixed {
+    color: red;
+    stroke: red;
+    fill: none;
+    visibility: visible;
+}
+

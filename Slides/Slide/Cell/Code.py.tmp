@@ -1,0 +1,358 @@
+import re,os
+
+class Slides_Slide_Cell_Code():
+    ##!
+    ##! Insert file of code.
+    ##!
+    
+    def Slide_Cell_Code_Lines_Read(self,scriptfile):
+                
+        contents=self.File_Read_Lines(scriptfile)
+
+        #Leading empty lines
+        first_not_empty=-1
+        for n in range(len(contents)):
+            if (re.search('\S',contents[n])):
+                first_not_empty=n
+                break
+                
+        #Trailing empty lines
+        last_not_empty=0
+        for n in range(len(contents)-1,0,-1):
+            if (re.search('\S',contents[n])):
+                last_not_empty=n
+                break
+
+        rcontents=[]
+        for n in range( first_not_empty,last_not_empty+1):
+            rcontents.append(contents[n])
+        
+        rcontents=self.Slide_Cell_Code_Parse(scriptfile,rcontents)
+        
+        return rcontents
+
+        
+    ##!
+    ##! Do parsing for special types based on file extension:
+    ##!
+    ##! html|svg: change < resp. > to &lt; resp. &gt;
+    ##* tex: replace \input's with links,
+    ##* activating SMTC including addicional code field.
+    ##!
+    
+    def Slide_Cell_Code_Parse(self,scriptfile,contents):
+        
+        if (re.search('.(html|svg)$',scriptfile)):
+            self.Slide_Cell_Code_Parse_XML(scriptfile,contents)
+        elif (re.search('.tex$',scriptfile)):
+            self.Slide_Cell_Code_Parse_Tex(scriptfile,contents)
+
+            
+        return contents
+    
+    ##!
+    ##! Parse contents as tex.
+    ##!
+    
+    def Slide_Cell_Code_Parse_Tex(self,scriptfile,contents):
+        url=self.CGI_Query_Path()
+        for n in range( len(contents) ):
+            reg=re.search('\\input\{(\S+)\}',contents[n])
+            if (reg):
+                fname=reg.group(1)
+                if (not re.search('\.tex$',fname)):
+                    fname=fname+'.tex'
+                    
+                fname=re.sub('\\\\TiKZPath',"/usr/local/tikz",fname)
+                
+                link=self.A(
+                    "?"+url+"&Src="+fname,
+                    '\input{'+fname+'}',
+                    {},
+                    "",
+                    re.sub('\.',"",os.path.basename(fname)) #anchor
+                )
+
+                #Why is two \\ necessary?
+                contents[n]=re.sub(
+                    '\\\\input\{(\S+)\}',
+                    link,
+                    contents[n]
+                )
+                
+        return contents
+
+    ##!
+    ##! Parse contents as xml (html|svg).
+    ##!
+    
+    def Slide_Cell_Code_Parse_XML(self,scriptfile,contents):
+        for n in range( len(contents) ):
+            contents[n]=re.sub('<',"&lt;",contents[n])
+            contents[n]=re.sub('>',"&gt;",contents[n])
+                
+        return contents
+
+    ##!
+    ##! Insert file of code.
+    ##!
+    
+    def Slide_Cell_Code_Insert(self,content,paths,options={}):
+        html=[]
+        if ( re.search('@Code\{?\s*',content, re.IGNORECASE) ):
+            args=re.sub(r'@Code\s*',"",content, re.IGNORECASE)
+            args=re.sub(r'^\s+',"",args)
+                
+            args=re.compile("\s").split(args)
+
+            scriptfile=""
+            if ( len(args)>0 ):
+                #Name of script file
+                scriptfile=args[0]
+
+            content=self.Slide_Cell_Code_File(
+                content,scriptfile,paths,
+                args,options={}
+            )
+
+            
+        src_file=self.CGI_POST("Src")
+        if (src_file!=None):
+            basename=os.path.dirname(scriptfile)
+            if (re.search('\\TiKZPath',src_file)):
+                src_file=re.sub(
+                    '\\TiKZPath',
+                    "/usr/local/tikz",
+                    src_file
+                )
+                
+            if (not re.search('^/',src_file)):
+                src_file="/".join([
+                    os.path.dirname(scriptfile),
+                    src_file
+                ])
+
+            content=content+[
+                "Showing "+src_file+":",
+            ]
+
+            content=content+self.Slide_Cell_Code_File(
+                content,
+                src_file,
+                paths
+            )
+
+        return content
+ 
+    ##!
+    ##! Insert file of code.
+    ##!
+    
+    def Slide_Cell_Code_File_Type(self,scriptfile):
+        #Code type from extension
+        codetype="??"+scriptfile
+        if (re.search('\.py$',scriptfile) ):
+            codetype="Python"
+        elif (re.search('\.html$',scriptfile) ):
+            codetype="HTML"
+        elif (re.search('\.pl$',scriptfile) ):
+            codetype="Perl"
+        elif (re.search('\.php$',scriptfile) ):
+            codetype="PHP"
+        elif (re.search('\.sh$',scriptfile) ):
+            codetype="Shell Script"
+        elif (re.search('\.svg$',scriptfile) ):
+            codetype="SVG"
+        elif (re.search('\.tikz.tex$',scriptfile) ):
+            codetype="TiKZ"
+        elif (re.search('\.tex$',scriptfile) ):
+            codetype="LaTeX"
+
+        return codetype
+
+    ##!
+    ##! Insert file of code.
+    ##!
+    
+    def Slide_Cell_Code_File(self,content,scriptfile,paths,args=[],options={}):
+                    
+        #Relative path to script file.
+        rscriptfile=scriptfile
+
+        if (not re.search('^/',rscriptfile)):
+            rscriptfile="/".join(
+                [self.DocRoot]+paths+[scriptfile]
+            )
+
+        if (self.File_Exists(rscriptfile+".tex")):
+            scriptfile=scriptfile+".tex"
+            rscriptfile=rscriptfile+".tex"
+
+        if (not self.File_Exists(rscriptfile)):
+            return [
+                self.XML_Tags(
+                    "Code",
+                    re.sub('@Code\s+',"",content)
+                ),
+                "<BR>"
+            ]
+
+        content=self.Slide_Cell_Code_Lines_Read(rscriptfile)
+
+        rargs=[]
+
+        height=None
+        width=None
+                
+        if (len(args)>1):
+            for i in range(1,len(args)):
+                if (re.search('^height=\d+',args[i])):
+                    height=re.sub('^height=',"",args[i])
+                elif (re.search('^width=\d+',args[i])):
+                    width=re.sub('^width=',"",args[i])
+                else:
+                    rargs.append(args[i])
+                            
+        #More arguments in args: name of functions to include.
+        if (len(rargs)>1):
+            #Initial key name
+            current_key="__Start__"
+            rcontents={ current_key: [] }
+
+            for line in content:
+                m=re.search('def (\S+)\(',line)
+                if (m and m.groups()):
+                    function=m.group(1)
+                    current_key=function
+                    #New list
+                    rcontents[ current_key ]=[]
+
+                    rcontents[ current_key ].append(line)
+
+            content=[]
+            for i in range(1,len(rargs)):
+                arg=rargs[i]
+                if (rcontents.has_key(arg)):
+                    content=content+rcontents[ arg ]
+
+        options.update({
+            "CLASS": 'Code',
+            "id":    re.sub('\.',"",os.path.basename(scriptfile)),
+        })
+
+        if (not "STYLE" in options.keys()):
+            options[ "STYLE" ]={}
+
+        if (height!=None):
+            options[ "STYLE" ][ "HEIGHT" ]=height
+            options[ "STYLE" ][ "overflow-y" ]="scroll"
+        if (width!=None):
+            options[ "STYLE" ][ "WIDTH" ]=width
+            options[ "STYLE" ][ "overflow-x" ]="scroll"
+
+        code_options={
+            "CLASS": 'Code',
+        }
+
+        #No newline to prevent newline after start tag
+        #As it causes the browser to start text one line below
+        content=self.XML_Tags_No_New_Line(
+            "CODE",
+            content,
+            code_options
+        )
+        content=self.XML_Tags(
+            "PRE",
+            content,
+            code_options
+        )
+        content=self.XML_Tags(
+            "DIV",
+            content,
+            options
+        )
+        
+        codetype=self.Slide_Cell_Code_File_Type(scriptfile)
+
+        
+        
+        #Format contents.
+        content=[
+            self.Div(
+                self.Slide_Cell_Code_File_Info(scriptfile,paths,args),
+                {
+                    "class": "Code_Title",
+                }
+            ),
+            "\n".join(content),
+       ]
+
+        return self.Slide_Cell_Code_Edit(content,scriptfile,paths,args)
+
+    ##!
+    ##! File info entry for file
+    ##!
+    
+    def Slide_Cell_Code_Edit(self,content,scriptfile,paths,args=[]):
+        
+        return [
+            self.HTML_Frame(content),
+            self.HTML_Frame(
+                "Edit"
+            ),
+        ]
+
+    
+    ##!
+    ##! File info entry for file
+    ##!
+    
+    def Slide_Cell_Code_File_Info(self,scriptfile,paths,args=[]):
+                    
+        codetype=self.Slide_Cell_Code_File_Type(scriptfile)
+
+        info=[
+            codetype+" Listing: "+scriptfile,
+        ]
+
+        titles={}
+        if (codetype=="TiKZ" or codetype=="LaTeX"):
+                
+            titles={
+                "pdf": "PDF",
+                "svg": "SVG",
+                "png": "PNG",
+                "zip": "ZIP",
+            }
+            names={
+                "pdf": "PDF",
+                "svg": "SVG",
+                "png": "PNG",
+                "zip": "ZIP",
+            }
+            
+            cgi="/cgi-bin/tikz2"
+            if (codetype=="LaTeX"):
+                cgi="/cgi-bin/latex2"
+                
+            scriptfile="/".join(
+                [
+                    "Slides"
+                ]+paths+[
+                    scriptfile,
+                ]
+            )
+
+            keys=titles.keys()
+            keys.sort()
+            for key in ("pdf","svg","png"):
+                info.append(
+                    self.HTML_A(
+                        cgi+key+"?Src="+scriptfile,
+                        names[ key ],
+                        {},
+                        titles[ key ]
+                    )
+                )
+
+        return info

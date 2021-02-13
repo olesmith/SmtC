@@ -1,0 +1,36 @@
+ In order to improve our approximation of the curve, we include second order derivatives:
+ 
+ \[
+  \label{eq:taylor:1}
+  \Vector{r}(t)
+  \approx
+  \Vector{r}(t_0)
+  +
+  \Vector{r}'(t_0)(t-t_0)
+  +
+  \frac{1}{2}
+  \Vector{r}''(t_0)(t-t_0)^2
+\]
+
+The curvature of the curve is the factor $\kappa$, appearing in (\ref{eq:curvature}):
+
+\[
+ \frac{d \Vector{t}}{dt}=\kappa \Vector{n},
+\]
+
+that is:
+
+\[
+ \kappa
+ =
+ \frac{d \Vector{t}}{dt} \cdot \Vector{n}
+\]
+
+Since:
+
+\[
+ \Vector{t}
+ =
+ \frac{ \Vector{r}' }{ |\Vector{r}'| }
+\]
+

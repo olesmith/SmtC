@@ -1,0 +1,143 @@
+ In a point, $t=t_0$, where $\Vector{r}'(t) \neq \Vector{0}$, we have the first order aproximation:
+ 
+ \begin{equation}
+  \label{eq:taylor:1}
+  \Vector{r}(t)
+  \approx
+  \Vector{r}(t_0)
+  +
+  \Vector{r}'(t_0)(t-t_0)
+\end{equation}
+
+ As the factor $t-t_0$ changes sign, this means, that the 
+ curve arrives at and departures from the point $\Vector{r}(t_0)$,
+ smoothly along the direction of the vector tangent, $\Vector{r}'(t_0)$. 
+ Introduzing the \emph{unit tangent}, $\Vector{t}(t)$, (or simply tangent):
+ 
+ \[
+  \Vector{t}(t)=\frac{\Vector{r}'(t)}{|\Vector{r}'(t)|}
+ \]
+ 
+In coordinates:
+
+\[
+ \Vector{t}=
+ \frac{\Vector{r}'}{|\Vector{r}'(t)|}
+ =
+ \frac{1}{\sqrt{x'^2+y'^2}}
+ \begin{pmatrix}
+  x'\\y'
+ \end{pmatrix}
+\]
+
+By the unit normal, $\Vector{n}(t)$, we understand:
+
+\[
+ \Vector{n}=
+ \frac{1}{\sqrt{x'^2+y'^2}}
+ \begin{pmatrix}
+  -y'\\x'
+ \end{pmatrix} 
+\]
+
+We write: $\Vector{n}=\Vector{\widehat{t}}$. 
+Introducing the \emph{Accompanying Coordinate System} (ACS), $(\Vector{r},\Vector{t},\Vector{n})$,
+which is again positively oriented, resumed in:
+
+\[
+ \Vector{\widehat{i}}=\Vector{j},
+ \qquad
+ \Vector{\widehat{j}}=-\Vector{i},
+ \qquad \qquad
+ \Vector{\widehat{t}}=\Vector{n},
+ \qquad
+ \Vector{\widehat{n}}=-\Vector{t}.
+ \]
+
+ \input{Introduction/Ellipsis.1}
+ 
+Considering a vector function, $\Vector{a}(t)$, of \emph{fixed length}: 
+$\Vector{a}(t) \cdot \Vector{a}(t)=l^2$, 
+deriving we obtain:
+
+\[
+ \Vector{a}(t) \cdot \Vector{a}'(t)=0,
+\]
+
+that is: the derivative vector is perpendicular to the original vector. Particularly the derivative
+of unit tangent, $\Vector{t}$,
+must be orthogonal to itself, that is be parallel to the (unit) normal:
+
+\begin{equation}
+  \label{eq:curvature}
+ \Vector{t}'(t)
+ =
+ \rho \Vector{n}
+\end{equation}
+
+Taking the orthogonal complement of this equation, $\Vector{\widehat{t}'}=\widehat{\Vector{t}'}$:
+
+\[
+ \Vector{n}'(t)
+ =
+ \rho \Vector{t}
+\]
+
+The factor of proportionality, $\kappa=\kappa(t)$, is what we later on, shall define as the curve curvature.
+
+In the following, the following unity vectors comes in handy:
+
+\[
+ \Vector{e}
+ =
+ \begin{pmatrix}
+   \cos{t}\\\sin{t}
+ \end{pmatrix}
+ \qquad \qquad
+  \Vector{f}
+ =
+ \begin{pmatrix}
+   -\sin{t}\\\cos{t}
+ \end{pmatrix}
+\]
+
+
+The coordinate system, $(\Vector{0},\Vector{e},\Vector{f})$ is,
+as were $(\Vector{r},\Vector{e},\Vector{f})$, maintains the orientation
+of $(\Vector{0},\Vector{i},\Vector{j})$. We shall need the versors, as well as
+the derivatives:
+
+\[
+ \Vector{e}'
+ =
+  \Vector{\widehat{e}}
+ =
+ \Vector{f},
+ \qquad\qquad
+ \Vector{f}'
+ =
+  \Vector{\widehat{f}}
+ =
+ -\Vector{e}.
+\]
+
+We shall also need the orthonormal unity vectors: 
+$\Vector{e}_\omega=\Vector{e}(\omega t)$ and 
+$\Vector{f}_\omega=\Vector{f}(\omega t)$, the difference
+from $\Vector{e}$ and $\Vector{f}$ being:
+
+\[
+  \Vector{e}_\omega'
+ =
+ _\omega\Vector{f}_\omega,
+ \qquad \qquad
+ \Vector{f}_\omega'
+ =
+ -_\omega\Vector{e}_\omega
+\]
+
+
+
+\input{Introduction/Cycloid.1}
+ 
+ 

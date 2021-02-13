@@ -1,0 +1,277 @@
+
+\begin{Definition} 
+   \textbf{Epicycloids and Hypocycloids.}
+
+   Consider a fixed circle of radius $a>0$, centered in the origin,
+   and a rolling circle of radius $b>0$. Rolling the latter on the
+   outside of the fixed circle, results in a curve called an
+   \emph{Epicycloid}, with parametrization:
+\[
+ \Vector{r}(t)
+ =
+ (a+b) \Vector{e}-b \Vector{e}(\omega t+\gamma)
+\]
+
+As for the Trochoids, we have included a phase parameter, and introduced
+the angular velocity of rolling circle, $\omega=(a+b)/b$. We write $E(a,b,\gamma)$.
+
+Changing the sign of the last term in this parametrization, 
+the circle are rolling on the inside of the fixed circe
+and we arrive at a socalled \emph{Hypocycloid},
+$H(a,b,\gamma)$. Allowing negative $b$'s, we may write:
+$H(a,b,\gamma)=E(a,-b,\gamma)$.
+\end{Definition}
+
+As to be seen in the remainder of this section, these curves presents
+striking similarities with the Cycloids and Trochoids. In fact, we shall
+prove that the evolute of an Epicycloid, respectively a Hypocycloid,
+is again an Epicycloid, respectively a Hypocycloid. 
+
+
+\begin{Definition} 
+   \textbf{Epictrochoids and Hypotrochoids.}
+
+As in the case of Cycloids and Trochoids, we extend the description to
+include Trochoid like curves, with $c \in \mathbb{R}$: 
+\[
+ \Vector{r}(t)
+ =
+ (a+b) \Vector{e}-c \Vector{e}(\omega t+\gamma)
+\]
+
+For brevity, we write: $E(a,b,c,\gamma)$, respectively $H(a,b,c,\gamma)$.
+\end{Definition}
+
+We will also prove that the evolute of an Epitrochoid, respectively a Hypotrochoid,
+is \emph{not} an Epitrochoid, respectively a Hypotrochoid. 
+
+
+\vspace{3cm}
+
+Dado circumferência fixo de raio $R$ e circumferência de raio $r$, rolando sem deslizar dentro deste, ou seja
+com velocidadade angular:
+
+\[
+  \omega=\frac{R+r}{r}
+  =
+  1+\eta
+\]
+
+Epicicloid:
+
+\[
+ \Vector{r}(t)
+ =
+ (R+r) \Vector{e}-r \Vector{e}_\omega
+\]
+
+Derivando:
+
+\[
+ \Vector{r}'(t)
+ =
+ (R+r) \Vector{f}-r \omega \Vector{f}_\omega 
+\]
+
+\[
+ \Vector{r}''(t)
+ =
+ -(R+r) \Vector{e}+r \omega^2 \Vector{e}_\omega 
+\]
+
+Transversor da primeira derivada:
+
+\[
+ \Vector{\widehat{r}}'(t)
+ =
+ -(R+r) \Vector{e}+r \omega \Vector{e}_\omega 
+\]
+
+
+
+Vetor de curvatura:
+
+\[
+ \rho \Vector{n}
+ =
+  \frac 
+ {
+  v(t)^2
+  }
+  {
+    D(t)
+  }
+  ~
+  \Vector{\widehat{r} }'(t)
+  =
+  \frac 
+ {
+  v(t)^2
+  }
+  {
+    D(t)
+  }
+  ~
+  \left[ -(R+r) \Vector{e}+r \omega \Vector{e}_\omega \right]
+\]
+
+
+Centro de Curvatura:
+
+\[
+ \Vector{c}(t)
+ =
+  (R+r) \Vector{e}-r \Vector{e}_\omega
+  +
+ \frac{ v(t)^2 }{ D(t) }
+  ~
+  \left[ -(R+r) \Vector{e}+r \omega \Vector{e}_\omega \right]
+  =
+\]
+\[
+ (R+r) \left[ 1- \frac{ v(t)^2 }{ D(t) } \right] \Vector{e} 
+ -
+ r \left[  1- \omega \frac{ v(t)^2 }{ D(t) } \right]  \Vector{e} _\omega
+\]
+
+Velocidade:
+
+\[
+ v(t)^2
+ =
+ (R+r)^2+r^2 \omega^2 -2(R+r) r \omega ~\Vector{f} \cdot \Vector{f}_\omega
+\]
+
+Determinante:
+
+\[
+D(t)=
+ \left[ \Vector{r}'(t) \times \Vector{r}''(t)\right]
+  =
+ \Vector{\widehat{r} }'(t) \cdot \Vector{r}''(t)
+ =
+ \]
+ \[ 
+ \left[ -(R+r) \Vector{e}+r \omega \Vector{e}_\omega   \right]
+ \cdot
+ \left[   -(R+r) \Vector{e}+r \omega^2 \Vector{e}_\omega \right]
+ =
+ \]
+ \[
+ (R+r)^2+(r \omega)^2 \omega
+ -
+ \left\{  (R+r) r \omega^2 + r \omega (R+r) \right\} \Vector{e} \cdot \Vector{e}_\omega
+\]
+
+No Epicicloide, $r \omega=R+r$:
+
+\[
+ v(t)^2
+ =
+ (R+r)^2+(R+r)^2 -2(R+r) (R+r) ~\Vector{f} \cdot \Vector{f}_\omega
+ =
+ 2(R+r)^2 \left\{ 1-\Vector{f} \cdot \Vector{f}_\omega \right\}
+\]
+
+\[
+ D(t)=
+ (R+r)^2+(R+r)^2 \omega
+ -
+ \left\{  (R+r) (R+r) \omega + (R+r) (R+r) \right\} \Vector{e} \cdot \Vector{e}_\omega
+ =
+\]
+\[
+ (R+r)^2(1+\omega) \left\{ 1-\Vector{e} \cdot \Vector{e}_\omega \right\}
+\]
+
+
+
+Juntando e usando o fato $\Vector{e} \cdot \Vector{e}_\omega=\Vector{f} \cdot \Vector{f}_\omega=\cos{\eta t}$:
+
+\[
+ \frac{v(t)^2}{D(t)}
+ =
+ \frac
+ {
+   2(R+r)^2 \left\{ 1-\Vector{f} \cdot \Vector{f}_\omega \right\}
+ }
+ {
+   (R+r)^2(1+\omega) \left\{ 1-\Vector{e} \cdot \Vector{e}_\omega \right\}
+ }
+ =
+\]
+\[
+ \frac{2}{1+\omega}
+ =
+ \frac{2r}{r+r\omega}
+ =
+ \frac{2r}{R+2r}
+\]
+
+Calculamos a evoluta do Epicicloide:
+
+\[
+ \Vector{r}_c
+ =
+ \Vector{r}+\frac{v(t)^2}{D(t)}\Vector{\widehat{r}}'
+ =
+\]
+\[
+ (R+r) \Vector{e}-r \Vector{e}_\omega
+ +
+ \frac{v(t)^2}{D(t)}
+ \left[
+ -(R+r) \Vector{e}+r \omega \Vector{e}_\omega 
+ \right]
+ =
+\]
+
+\[
+ (R+r) \left\{ 1-\frac{v(t)^2}{D(t)} \right\} \Vector{e}
+ -
+ r \left\{ 1- \omega \frac{v(t)^2}{D(t)} \right\} \Vector{e}_\omega 
+\]
+
+Finalmente obtemos:
+
+\[
+ 1-\frac{v(t)^2}{D(t)}
+ =
+ 1-\frac{2r}{R+2r}
+ =
+ \frac{R+2r-2r}{R+2r}
+ =
+ \frac{R}{R+2r}
+\]
+
+E:
+
+\[
+  1- \omega \frac{v(t)^2}{D(t)}
+  =
+  1-\frac{R+r}{r} \frac{2r}{R+2r}
+  =
+  \frac{1}{R+2r}
+  \left[ R+2r-2(R+r) \right]
+  =
+  -\frac{R}{R+2r}
+\]
+
+A evoluta do Epicicloide:
+
+\[
+ \Vector{r}_c(t)
+ =
+ (R+r) \frac{R}{R+2r} \Vector{e}
+ +
+ r \frac{R}{R+2r} \Vector{e}_\omega
+\]
+
+Ou seja, novamente um Epicicloide, com:
+
+\[
+ R'=\frac{R}{R+2r} R,
+ \qquad
+ r'=-\frac{R}{R+2r} r
+\]
+

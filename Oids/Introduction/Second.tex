@@ -1,0 +1,52 @@
+ In order to improve our approximation of the curve, we include second order derivatives:
+ 
+ \[
+  \label{eq:taylor:1}
+  \Vector{r}(t)
+  \approx
+  \Vector{r}(t_0)
+  +
+  \Vector{r}'(t_0)(t-t_0)
+  +
+  \frac{1}{2}
+  \Vector{r}''(t_0)(t-t_0)^2
+\]
+
+Since:
+
+\[
+ \Vector{r}'
+ =
+ v \Vector{t}
+\]
+
+we obtain:
+
+\[
+ \Vector{r}''
+ =
+ v' \Vector{t}
+ +
+ v \Vector{t}'
+\]
+
+Equivalently:
+
+\[
+ v \Vector{t}'
+ =
+ \Vector{r}''
+ -
+ v' \Vector{t}
+\]
+
+In a regular point of the curve:
+
+\[
+ \Vector{t}'
+ =
+ \frac{ \Vector{r}'' }{ v}
+ -
+ \frac{v'}{v} \Vector{t}
+\]
+

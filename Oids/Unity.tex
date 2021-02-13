@@ -1,0 +1,104 @@
+
+Seja $\Vector{e}(t)$ um vetor \emph{normalizado}:
+\[
+ \Vector{e} \cdot \Vector{e} =1 
+ \qquad \Rightarrow\qquad
+ 2\Vector{e} \cdot \Vector{e}'=0
+ \qquad \Leftrightarrow\qquad
+ \Vector{e} \perp \Vector{e}'
+\]
+
+Usaremos:
+
+\[
+ \Vector{e}(t)
+ =
+ \begin{pmatrix}
+  \cos{t}\\\sin{t}
+ \end{pmatrix}
+  \qquad\qquad
+ \Vector{f}(t)
+ =
+ \begin{pmatrix}
+  -\sin{t}\\\cos{t}
+ \end{pmatrix}  
+\]
+
+E:
+
+\[
+ \Vector{e} \cdot \Vector{e}=\Vector{f} \cdot \Vector{f}=1
+ \qquad\qquad
+  \Vector{e} \cdot \Vector{f}=0
+\]
+
+Notamos:
+
+\[
+ \Vector{ \widehat{e} } =\Vector{f}
+ \qquad
+  \Vector{ \widehat{f} } =-\Vector{e}
+\]
+
+
+Para seus derivados:
+
+\[
+ \Vector{e}'=\Vector{f}
+ \qquad\qquad
+ \Vector{f}'=-\Vector{e}
+\]
+
+No mais:
+
+\[
+ \Vector{e}_\omega(t)
+ =
+ \begin{pmatrix}
+  \cos{\omega t}\\\sin{\omega t}
+ \end{pmatrix}
+  \qquad\qquad
+ \Vector{f}_\omega(t)
+ =
+ \begin{pmatrix}
+  -\sin{\omega t}\\\cos{\omega t}
+ \end{pmatrix}  
+\]
+
+Novamente:
+
+\[
+\qquad
+ \Vector{ \widehat{e} }_\omega =\Vector{f}_\omega
+ \qquad
+ \Vector{ \widehat{f} }_\omega =-\Vector{e}_\omega
+ \qquad
+\]
+
+E:
+
+\[
+ \Vector{e}_\omega \cdot \Vector{e}_\omega=\Vector{f}_\omega \cdot \Vector{f}_\omega=1
+ \qquad\qquad
+  \Vector{e}_\omega \cdot \Vector{f}_\omega=0
+\]
+
+Porém,pela regra da cadeia:
+
+\[
+  \Vector{e}_\omega'=\omega\Vector{f}_\omega
+ \qquad\qquad
+ \Vector{f}_\omega'=-\omega\Vector{e}_\omega
+\]
+
+Para os produtos escalares:
+
+\[
+ \Vector{e} \cdot \Vector{e}_\omega
+ =
+ \Vector{f} \cdot \Vector{f}_\omega
+ =
+ \cos{t}\cos{\omega t}+\sin{t}\sin{\omega t}
+ =
+ \cos{ (\omega-1) t }
+\]

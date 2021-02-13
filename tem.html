@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<HTML>
+   <HEAD>
+      <TITLE>Poopys</TITLE>
+      <META content="text/html; charset=utf-8" http-equiv="Content-type">
+      <META content="Prof. Dr. Ole Peter Smith, IME/UFG" name="Autor">
+      <LINK href="/Graphics/W3.css" rel="stylesheet">
+      <LINK href="/Graphics/Poops.css" rel="stylesheet">
+      <SCRIPT>
+      </SCRIPT>
+   </HEAD>
+   <BODY>
+<DIV class="w3-content w3-section">
+</DIV>
+<STYLE>
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1}
+    x[slideIndex-1].style.display = "block";
+    setTimeout(carousel,300); // Change image every 100 ms
+}
+
+</STYLE>
+
+   </BODY>
+</HTML>

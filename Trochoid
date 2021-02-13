@@ -1,0 +1,1614 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/css" href="poops.css" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+    "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg height="400" version="1.1" viewBox="0 0 1200 400" width="1200" xmlns="http://www.w3.org/2000/svg">
+<style><![CDATA[
+
+/* CSS BEGIN */
+/** World coordinate system **/
+.BackGround {
+    color: black;
+    stroke: black;
+    fill: black;
+    visibility: visible;
+}
+
+
+.IterationText {
+    color: blue;
+    stroke: blue;
+    fill: blue;
+    visibility: visible;
+}
+.WCS {
+    color: blue;
+    stroke: blue;
+    fill: blue;
+    visibility: visible;
+}
+
+.ACS {
+    color: blue;
+    stroke: blue;
+    fill: blue;
+    visibility: visible;
+}
+
+/** Main curves, r(t) **/
+
+.Curve_Mesh {
+    color: blue;
+    stroke: blue;
+    fill: blue;
+    visibility: hidden;
+}
+.Curve_Conn {
+    color: blue;
+    stroke: blue;
+    fill: none;
+    stroke-width: 2;
+}
+.Curve_Last {
+    color: red;
+    stroke: red;
+    fill: red;
+    stroke-width: 2;
+}
+.Curve_Text {
+    color: blue;
+    stroke: blue;
+    fill: none;
+    stroke-width: 2;
+    visibility: hidden;
+}
+
+.Curve_Velocity {
+    color: white;
+    stroke: white;
+    fill: white;
+    visibility: visible;
+}
+
+.Curve_Acceleration {
+    color: white;
+    stroke: white;
+    fill: white;
+    visibility: visible;
+}
+
+.Curve_Oscillating {
+    color: green;
+    stroke: green;
+    fill: none;
+    visibility: visible;
+    stroke-width: 2;
+}
+
+.Curve_Curvature_Vector {
+    color: green;
+    stroke: green;
+    fill: none;
+    visibility: visible;
+    stroke-width: 2;
+}
+
+/** Numerical Evolutes, r(t) **/
+
+.Numerical_Evolute_Mesh {
+    color: #aaaaaa;
+    stroke: #aaaaaa;
+    fill: white;
+    visibility: hidden;
+}
+.Numerical_Evolute_Conn {
+    color: #ffa900;
+    stroke: #ffa900;
+    fill: none;
+    stroke-width: 2;
+}
+.Numerical_Evolute_Last {
+    color: white;
+    stroke: white;
+    fill: white;
+    stroke-width: 2;
+}
+.Numerical_Evolute_Text {
+    color: red;
+    stroke: red;
+    fill: none;
+    stroke-width: 2;
+    visibility: hidden;
+}
+
+
+/** Analytical Evolutes, r(t) **/
+
+.Analytical_Evolute_Mesh {
+    color: orange;
+    stroke: orange;
+    fill: orange;
+    visibility: visible;
+}
+.Analytical_Evolute_Conn {
+    color: orange;
+    stroke: orange;
+    fill: none;
+    stroke-width: 2;
+    visibility: hidden;
+}
+.Analytical_Evolute_Last {
+    color: orange;
+    stroke: orange;
+    fill: orange;
+    stroke-width: 2;
+}
+.Analytical_Evolute_Text {
+    color: orange;
+    stroke: orange;
+    fill: orange;
+    stroke-width: 2;
+    visibility: hidden;
+}
+
+/** Parallel Curves **/
+
+.Parallel_Mesh {
+    color: white;
+    stroke: white;
+    fill: white;
+    visibility: hidden;
+}
+.Parallel_Conn {
+    color: red;
+    stroke: red;
+    fill: none;
+    stroke-width: 2;
+}
+.Parallel_Last {
+    color: red;
+    stroke: red;
+    fill: none;
+    stroke-width: 2;
+}
+.Parallel_Text {
+    color: red;
+    stroke: red;
+    fill: none;
+    stroke-width: 2;
+    visibility: hidden;
+}
+
+
+/** Rolloids **/
+
+.Roulette_Mesh {
+    color: white;
+    stroke: white;
+    fill: white;
+    visibility: visible;
+}
+.Roulette_Conn {
+    color: red;
+    stroke: red;
+    fill: none;
+    stroke-width: 2;
+}
+.Roulette_Last {
+    color: white;
+    stroke: white;
+    fill: white;
+    stroke-width: 2;
+}
+.Roulette_Text {
+    color: red;
+    stroke: red;
+    fill: none;
+    stroke-width: 2;
+    visibility: hidden;
+}
+
+
+.Roulette_Arc_Rolled {
+    color: cyan;
+    stroke: cyan;
+    fill: none;
+    stroke-width: 2;
+    visibility: visible;
+}
+.Roulette_Arc_Unrolled {
+    color: magenta;
+    stroke:magenta ;
+    fill: none;
+    stroke-width: 2;
+    visibility: visible;
+}
+.Rolling_CS {
+    color: yellow;
+    stroke: yellow;
+    fill: yellow;
+    stroke-width: 2;
+    visibility: visible;
+}
+.Rolling_Center {
+    color: magenta;
+    stroke: magenta;
+    fill: magenta;
+    stroke-width: 2;
+    visibility: visible;
+}
+.Roulette_CS {
+    color: brown;
+    stroke: brown;
+    fill: brown;
+    stroke-width: 2;
+    visibility: visible;
+}
+.Rolling_Fixed {
+    color: red;
+    stroke: red;
+    fill: none;
+    visibility: visible;
+}
+
+
+/* CSS END */
+]]></style>
+<title>Trochoid</title>
+<name>Trochoid</name>
+<defs>
+</defs>
+<!-- **** DRAWING START **** -->
+<!-- *** Start: curves/Trochoid/Curve&ndash;1.0&ndash;&ndash;0.75&ndash;0.0&ndash;200.svg *** -->
+<polyline class="Curve_Conn" points="
+   54 91, 58 91, 62 91, 66 91, 70 90, 75 90, 79 89, 83 88, 87 87, 92 86,
+   96 84, 100 83, 105 82, 109 80, 114 78, 118 76, 123 75, 128 73, 133 71, 138 68,
+   142 66, 148 64, 153 62, 158 60, 163 57, 169 55, 174 53, 180 50, 185 48, 191 46,
+   197 44, 203 42, 209 40, 215 38, 221 36, 227 34, 234 32, 240 30, 246 29, 253 27,
+   259 26, 266 24, 273 23, 279 22, 286 21, 293 20, 300 20, 306 19, 313 19, 320 19,
+   327 19, 334 19, 340 19, 347 19, 354 20, 361 20, 367 21, 374 22, 381 23, 387 24,
+   394 26, 401 27, 407 29, 414 30, 420 32, 426 34, 432 36, 439 38, 445 40, 451 42,
+   457 44, 462 46, 468 48, 474 50, 479 53, 485 55, 490 57, 496 60, 501 62, 506 64,
+   511 66, 516 68, 521 71, 526 73, 531 75, 535 76, 540 78, 544 80, 549 82, 553 83,
+   558 84, 562 86, 566 87, 571 88, 575 89, 579 90, 583 90, 587 91, 591 91, 595 91,
+   600 91, 604 91, 608 91, 612 91, 616 90, 620 90, 624 89, 628 88, 633 87, 637 86,
+   641 84, 646 83, 650 82, 655 80, 659 78, 664 76, 668 75, 673 73, 678 71, 683 68,
+   688 66, 693 64, 698 62, 703 60, 709 57, 714 55, 720 53, 725 50, 731 48, 737 46,
+   742 44, 748 42, 754 40, 760 38, 767 36, 773 34, 779 32, 785 30, 792 29, 798 27,
+   805 26, 812 24, 818 23, 825 22, 832 21, 838 20, 845 20, 852 19, 859 19, 865 19,
+   872 19, 879 19, 886 19, 893 19, 899 20, 906 20, 913 21, 920 22, 926 23, 933 24,
+   940 26, 946 27, 953 29, 959 30, 965 32, 972 34, 978 36, 984 38, 990 40, 996 42,
+   1002 44, 1008 46, 1014 48, 1019 50, 1025 53, 1030 55, 1036 57, 1041 60, 1046 62, 1051 64,
+   1057 66, 1061 68, 1066 71, 1071 73, 1076 75, 1081 76, 1085 78, 1090 80, 1094 82, 1099 83,
+   1103 84, 1107 86, 1112 87, 1116 88, 1120 89, 1124 90, 1129 90, 1133 91, 1137 91, 1141 91,
+   1145 91"/>
+<circle class="Curve_Mesh" cx="54" cy="91" r="2"/>
+<circle class="Curve_Mesh" cx="58" cy="91" r="2"/>
+<circle class="Curve_Mesh" cx="62" cy="91" r="2"/>
+<circle class="Curve_Mesh" cx="66" cy="91" r="2"/>
+<circle class="Curve_Mesh" cx="70" cy="90" r="2"/>
+<circle class="Curve_Mesh" cx="75" cy="90" r="2"/>
+<circle class="Curve_Mesh" cx="79" cy="89" r="2"/>
+<circle class="Curve_Mesh" cx="83" cy="88" r="2"/>
+<circle class="Curve_Mesh" cx="87" cy="87" r="2"/>
+<circle class="Curve_Mesh" cx="92" cy="86" r="2"/>
+<circle class="Curve_Mesh" cx="96" cy="84" r="2"/>
+<circle class="Curve_Mesh" cx="100" cy="83" r="2"/>
+<circle class="Curve_Mesh" cx="105" cy="82" r="2"/>
+<circle class="Curve_Mesh" cx="109" cy="80" r="2"/>
+<circle class="Curve_Mesh" cx="114" cy="78" r="2"/>
+<circle class="Curve_Mesh" cx="118" cy="76" r="2"/>
+<circle class="Curve_Mesh" cx="123" cy="75" r="2"/>
+<circle class="Curve_Mesh" cx="128" cy="73" r="2"/>
+<circle class="Curve_Mesh" cx="133" cy="71" r="2"/>
+<circle class="Curve_Mesh" cx="138" cy="68" r="2"/>
+<circle class="Curve_Mesh" cx="142" cy="66" r="2"/>
+<circle class="Curve_Mesh" cx="148" cy="64" r="2"/>
+<circle class="Curve_Mesh" cx="153" cy="62" r="2"/>
+<circle class="Curve_Mesh" cx="158" cy="60" r="2"/>
+<circle class="Curve_Mesh" cx="163" cy="57" r="2"/>
+<circle class="Curve_Mesh" cx="169" cy="55" r="2"/>
+<circle class="Curve_Mesh" cx="174" cy="53" r="2"/>
+<circle class="Curve_Mesh" cx="180" cy="50" r="2"/>
+<circle class="Curve_Mesh" cx="185" cy="48" r="2"/>
+<circle class="Curve_Mesh" cx="191" cy="46" r="2"/>
+<circle class="Curve_Mesh" cx="197" cy="44" r="2"/>
+<circle class="Curve_Mesh" cx="203" cy="42" r="2"/>
+<circle class="Curve_Mesh" cx="209" cy="40" r="2"/>
+<circle class="Curve_Mesh" cx="215" cy="38" r="2"/>
+<circle class="Curve_Mesh" cx="221" cy="36" r="2"/>
+<circle class="Curve_Mesh" cx="227" cy="34" r="2"/>
+<circle class="Curve_Mesh" cx="234" cy="32" r="2"/>
+<circle class="Curve_Mesh" cx="240" cy="30" r="2"/>
+<circle class="Curve_Mesh" cx="246" cy="29" r="2"/>
+<circle class="Curve_Mesh" cx="253" cy="27" r="2"/>
+<circle class="Curve_Mesh" cx="259" cy="26" r="2"/>
+<circle class="Curve_Mesh" cx="266" cy="24" r="2"/>
+<circle class="Curve_Mesh" cx="273" cy="23" r="2"/>
+<circle class="Curve_Mesh" cx="279" cy="22" r="2"/>
+<circle class="Curve_Mesh" cx="286" cy="21" r="2"/>
+<circle class="Curve_Mesh" cx="293" cy="20" r="2"/>
+<circle class="Curve_Mesh" cx="300" cy="20" r="2"/>
+<circle class="Curve_Mesh" cx="306" cy="19" r="2"/>
+<circle class="Curve_Mesh" cx="313" cy="19" r="2"/>
+<circle class="Curve_Mesh" cx="320" cy="19" r="2"/>
+<circle class="Curve_Mesh" cx="327" cy="19" r="2"/>
+<circle class="Curve_Mesh" cx="334" cy="19" r="2"/>
+<circle class="Curve_Mesh" cx="340" cy="19" r="2"/>
+<circle class="Curve_Mesh" cx="347" cy="19" r="2"/>
+<circle class="Curve_Mesh" cx="354" cy="20" r="2"/>
+<circle class="Curve_Mesh" cx="361" cy="20" r="2"/>
+<circle class="Curve_Mesh" cx="367" cy="21" r="2"/>
+<circle class="Curve_Mesh" cx="374" cy="22" r="2"/>
+<circle class="Curve_Mesh" cx="381" cy="23" r="2"/>
+<circle class="Curve_Mesh" cx="387" cy="24" r="2"/>
+<circle class="Curve_Mesh" cx="394" cy="26" r="2"/>
+<circle class="Curve_Mesh" cx="401" cy="27" r="2"/>
+<circle class="Curve_Mesh" cx="407" cy="29" r="2"/>
+<circle class="Curve_Mesh" cx="414" cy="30" r="2"/>
+<circle class="Curve_Mesh" cx="420" cy="32" r="2"/>
+<circle class="Curve_Mesh" cx="426" cy="34" r="2"/>
+<circle class="Curve_Mesh" cx="432" cy="36" r="2"/>
+<circle class="Curve_Mesh" cx="439" cy="38" r="2"/>
+<circle class="Curve_Mesh" cx="445" cy="40" r="2"/>
+<circle class="Curve_Mesh" cx="451" cy="42" r="2"/>
+<circle class="Curve_Mesh" cx="457" cy="44" r="2"/>
+<circle class="Curve_Mesh" cx="462" cy="46" r="2"/>
+<circle class="Curve_Mesh" cx="468" cy="48" r="2"/>
+<circle class="Curve_Mesh" cx="474" cy="50" r="2"/>
+<circle class="Curve_Mesh" cx="479" cy="53" r="2"/>
+<circle class="Curve_Mesh" cx="485" cy="55" r="2"/>
+<circle class="Curve_Mesh" cx="490" cy="57" r="2"/>
+<circle class="Curve_Mesh" cx="496" cy="60" r="2"/>
+<circle class="Curve_Mesh" cx="501" cy="62" r="2"/>
+<circle class="Curve_Mesh" cx="506" cy="64" r="2"/>
+<circle class="Curve_Mesh" cx="511" cy="66" r="2"/>
+<circle class="Curve_Mesh" cx="516" cy="68" r="2"/>
+<circle class="Curve_Mesh" cx="521" cy="71" r="2"/>
+<circle class="Curve_Mesh" cx="526" cy="73" r="2"/>
+<circle class="Curve_Mesh" cx="531" cy="75" r="2"/>
+<circle class="Curve_Mesh" cx="535" cy="76" r="2"/>
+<circle class="Curve_Mesh" cx="540" cy="78" r="2"/>
+<circle class="Curve_Mesh" cx="544" cy="80" r="2"/>
+<circle class="Curve_Mesh" cx="549" cy="82" r="2"/>
+<circle class="Curve_Mesh" cx="553" cy="83" r="2"/>
+<circle class="Curve_Mesh" cx="558" cy="84" r="2"/>
+<circle class="Curve_Mesh" cx="562" cy="86" r="2"/>
+<circle class="Curve_Mesh" cx="566" cy="87" r="2"/>
+<circle class="Curve_Mesh" cx="571" cy="88" r="2"/>
+<circle class="Curve_Mesh" cx="575" cy="89" r="2"/>
+<circle class="Curve_Mesh" cx="579" cy="90" r="2"/>
+<circle class="Curve_Mesh" cx="583" cy="90" r="2"/>
+<circle class="Curve_Mesh" cx="587" cy="91" r="2"/>
+<circle class="Curve_Mesh" cx="591" cy="91" r="2"/>
+<circle class="Curve_Mesh" cx="595" cy="91" r="2"/>
+<circle class="Curve_Mesh" cx="600" cy="91" r="2"/>
+<circle class="Curve_Mesh" cx="604" cy="91" r="2"/>
+<circle class="Curve_Mesh" cx="608" cy="91" r="2"/>
+<circle class="Curve_Mesh" cx="612" cy="91" r="2"/>
+<circle class="Curve_Mesh" cx="616" cy="90" r="2"/>
+<circle class="Curve_Mesh" cx="620" cy="90" r="2"/>
+<circle class="Curve_Mesh" cx="624" cy="89" r="2"/>
+<circle class="Curve_Mesh" cx="628" cy="88" r="2"/>
+<circle class="Curve_Mesh" cx="633" cy="87" r="2"/>
+<circle class="Curve_Mesh" cx="637" cy="86" r="2"/>
+<circle class="Curve_Mesh" cx="641" cy="84" r="2"/>
+<circle class="Curve_Mesh" cx="646" cy="83" r="2"/>
+<circle class="Curve_Mesh" cx="650" cy="82" r="2"/>
+<circle class="Curve_Mesh" cx="655" cy="80" r="2"/>
+<circle class="Curve_Mesh" cx="659" cy="78" r="2"/>
+<circle class="Curve_Mesh" cx="664" cy="76" r="2"/>
+<circle class="Curve_Mesh" cx="668" cy="75" r="2"/>
+<circle class="Curve_Mesh" cx="673" cy="73" r="2"/>
+<circle class="Curve_Mesh" cx="678" cy="71" r="2"/>
+<circle class="Curve_Mesh" cx="683" cy="68" r="2"/>
+<circle class="Curve_Mesh" cx="688" cy="66" r="2"/>
+<circle class="Curve_Mesh" cx="693" cy="64" r="2"/>
+<circle class="Curve_Mesh" cx="698" cy="62" r="2"/>
+<circle class="Curve_Mesh" cx="703" cy="60" r="2"/>
+<circle class="Curve_Mesh" cx="709" cy="57" r="2"/>
+<circle class="Curve_Mesh" cx="714" cy="55" r="2"/>
+<circle class="Curve_Mesh" cx="720" cy="53" r="2"/>
+<circle class="Curve_Mesh" cx="725" cy="50" r="2"/>
+<circle class="Curve_Mesh" cx="731" cy="48" r="2"/>
+<circle class="Curve_Mesh" cx="737" cy="46" r="2"/>
+<circle class="Curve_Mesh" cx="742" cy="44" r="2"/>
+<circle class="Curve_Mesh" cx="748" cy="42" r="2"/>
+<circle class="Curve_Mesh" cx="754" cy="40" r="2"/>
+<circle class="Curve_Mesh" cx="760" cy="38" r="2"/>
+<circle class="Curve_Mesh" cx="767" cy="36" r="2"/>
+<circle class="Curve_Mesh" cx="773" cy="34" r="2"/>
+<circle class="Curve_Mesh" cx="779" cy="32" r="2"/>
+<circle class="Curve_Mesh" cx="785" cy="30" r="2"/>
+<circle class="Curve_Mesh" cx="792" cy="29" r="2"/>
+<circle class="Curve_Mesh" cx="798" cy="27" r="2"/>
+<circle class="Curve_Mesh" cx="805" cy="26" r="2"/>
+<circle class="Curve_Mesh" cx="812" cy="24" r="2"/>
+<circle class="Curve_Mesh" cx="818" cy="23" r="2"/>
+<circle class="Curve_Mesh" cx="825" cy="22" r="2"/>
+<circle class="Curve_Mesh" cx="832" cy="21" r="2"/>
+<circle class="Curve_Mesh" cx="838" cy="20" r="2"/>
+<circle class="Curve_Mesh" cx="845" cy="20" r="2"/>
+<circle class="Curve_Mesh" cx="852" cy="19" r="2"/>
+<circle class="Curve_Mesh" cx="859" cy="19" r="2"/>
+<circle class="Curve_Mesh" cx="865" cy="19" r="2"/>
+<circle class="Curve_Mesh" cx="872" cy="19" r="2"/>
+<circle class="Curve_Mesh" cx="879" cy="19" r="2"/>
+<circle class="Curve_Mesh" cx="886" cy="19" r="2"/>
+<circle class="Curve_Mesh" cx="893" cy="19" r="2"/>
+<circle class="Curve_Mesh" cx="899" cy="20" r="2"/>
+<circle class="Curve_Mesh" cx="906" cy="20" r="2"/>
+<circle class="Curve_Mesh" cx="913" cy="21" r="2"/>
+<circle class="Curve_Mesh" cx="920" cy="22" r="2"/>
+<circle class="Curve_Mesh" cx="926" cy="23" r="2"/>
+<circle class="Curve_Mesh" cx="933" cy="24" r="2"/>
+<circle class="Curve_Mesh" cx="940" cy="26" r="2"/>
+<circle class="Curve_Mesh" cx="946" cy="27" r="2"/>
+<circle class="Curve_Mesh" cx="953" cy="29" r="2"/>
+<circle class="Curve_Mesh" cx="959" cy="30" r="2"/>
+<circle class="Curve_Mesh" cx="965" cy="32" r="2"/>
+<circle class="Curve_Mesh" cx="972" cy="34" r="2"/>
+<circle class="Curve_Mesh" cx="978" cy="36" r="2"/>
+<circle class="Curve_Mesh" cx="984" cy="38" r="2"/>
+<circle class="Curve_Mesh" cx="990" cy="40" r="2"/>
+<circle class="Curve_Mesh" cx="996" cy="42" r="2"/>
+<circle class="Curve_Mesh" cx="1002" cy="44" r="2"/>
+<circle class="Curve_Mesh" cx="1008" cy="46" r="2"/>
+<circle class="Curve_Mesh" cx="1014" cy="48" r="2"/>
+<circle class="Curve_Mesh" cx="1019" cy="50" r="2"/>
+<circle class="Curve_Mesh" cx="1025" cy="53" r="2"/>
+<circle class="Curve_Mesh" cx="1030" cy="55" r="2"/>
+<circle class="Curve_Mesh" cx="1036" cy="57" r="2"/>
+<circle class="Curve_Mesh" cx="1041" cy="60" r="2"/>
+<circle class="Curve_Mesh" cx="1046" cy="62" r="2"/>
+<circle class="Curve_Mesh" cx="1051" cy="64" r="2"/>
+<circle class="Curve_Mesh" cx="1057" cy="66" r="2"/>
+<circle class="Curve_Mesh" cx="1061" cy="68" r="2"/>
+<circle class="Curve_Mesh" cx="1066" cy="71" r="2"/>
+<circle class="Curve_Mesh" cx="1071" cy="73" r="2"/>
+<circle class="Curve_Mesh" cx="1076" cy="75" r="2"/>
+<circle class="Curve_Mesh" cx="1081" cy="76" r="2"/>
+<circle class="Curve_Mesh" cx="1085" cy="78" r="2"/>
+<circle class="Curve_Mesh" cx="1090" cy="80" r="2"/>
+<circle class="Curve_Mesh" cx="1094" cy="82" r="2"/>
+<circle class="Curve_Mesh" cx="1099" cy="83" r="2"/>
+<circle class="Curve_Mesh" cx="1103" cy="84" r="2"/>
+<circle class="Curve_Mesh" cx="1107" cy="86" r="2"/>
+<circle class="Curve_Mesh" cx="1112" cy="87" r="2"/>
+<circle class="Curve_Mesh" cx="1116" cy="88" r="2"/>
+<circle class="Curve_Mesh" cx="1120" cy="89" r="2"/>
+<circle class="Curve_Mesh" cx="1124" cy="90" r="2"/>
+<circle class="Curve_Mesh" cx="1129" cy="90" r="2"/>
+<circle class="Curve_Mesh" cx="1133" cy="91" r="2"/>
+<circle class="Curve_Mesh" cx="1137" cy="91" r="2"/>
+<circle class="Curve_Mesh" cx="1141" cy="91" r="2"/>
+<circle class="Curve_Mesh" cx="1145" cy="91" r="2"/>
+<!-- *** End: curves/Trochoid/Curve&ndash;1.0&ndash;&ndash;0.75&ndash;0.0&ndash;200.svg *** -->
+<!-- *** Start: curves/Trochoid/Numerical_Evolute&ndash;1.0&ndash;&ndash;0.75&ndash;0.0&ndash;200.svg *** -->
+<polyline class="Numerical_Evolute_Conn" cx="1145" cy="-236" points="
+   54 -236, 54 -238, 54 -243, 54 -252, 53 -265, 52 -282, 51 -304, 49 -331, 46 -366, 41 -409,
+   36 -462, 28 -528, 18 -612, 4 -719, -14 -861, -41 -1053, -80 -1326, -141 -1742, -246 -2442, -462 -3860,
+   -1127 -8194, 60361 390805, 1472 8641, 849 4579, 640 3211, 538 2527, 477 2118, 438 1848, 411 1657, 391 1516,
+   377 1407, 366 1322, 357 1254, 351 1198, 345 1152, 341 1113, 338 1081, 335 1053, 333 1030, 331 1010,
+   330 994, 329 979, 328 967, 328 957, 327 949, 327 942, 327 936, 327 932, 327 929, 327 927,
+   327 927, 327 927, 327 929, 327 932, 327 936, 326 942, 326 949, 326 957, 325 967, 324 979,
+   323 994, 322 1010, 320 1030, 318 1053, 316 1081, 312 1113, 308 1152, 303 1198, 296 1254, 288 1322,
+   277 1407, 262 1516, 243 1657, 216 1848, 176 2118, 116 2527, 13 3211, -194 4579, -818 8641, -59707 390805,
+   1781 -8194, 1116 -3860, 901 -2442, 795 -1742, 734 -1326, 695 -1053, 668 -861, 649 -719, 636 -612, 625 -528,
+   618 -462, 612 -409, 608 -366, 605 -331, 603 -304, 601 -282, 600 -265, 600 -252, 600 -243, 600 -238,
+   600 -236, 599 -238, 599 -243, 599 -252, 599 -265, 598 -282, 596 -304, 594 -331, 591 -366, 587 -409,
+   581 -462, 574 -528, 563 -612, 550 -719, 531 -861, 504 -1053, 465 -1326, 404 -1742, 298 -2442, 83 -3860,
+   -581 -8194, 60907 390805, 2018 8641, 1394 4579, 1186 3211, 1083 2527, 1023 2118, 983 1848, 956 1657, 937 1516,
+   922 1407, 911 1322, 903 1254, 896 1198, 891 1152, 887 1113, 883 1081, 881 1053, 879 1030, 877 1010,
+   876 994, 875 979, 874 967, 873 957, 873 949, 873 942, 872 936, 872 932, 872 929, 872 927,
+   872 927, 872 927, 872 929, 872 932, 872 936, 872 942, 872 949, 871 957, 871 967, 870 979,
+   869 994, 868 1010, 866 1030, 864 1053, 861 1081, 858 1113, 854 1152, 848 1198, 842 1254, 833 1322,
+   822 1407, 808 1516, 788 1657, 761 1848, 722 2118, 661 2527, 559 3211, 350 4579, -272 8641, -59161 390805,
+   2327 -8194, 1662 -3860, 1446 -2442, 1341 -1742, 1280 -1326, 1241 -1053, 1214 -861, 1195 -719, 1181 -612, 1171 -528,
+   1163 -462, 1158 -409, 1153 -366, 1150 -331, 1148 -304, 1147 -282, 1146 -265, 1145 -252, 1145 -243, 1145 -238,
+   1145 -236" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="54" cy="-236" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="54" cy="-238" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="54" cy="-243" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="54" cy="-252" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="53" cy="-265" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="52" cy="-282" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="51" cy="-304" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="49" cy="-331" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="46" cy="-366" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="41" cy="-409" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="36" cy="-462" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="28" cy="-528" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="18" cy="-612" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="4" cy="-719" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="-14" cy="-861" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="-41" cy="-1053" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="-80" cy="-1326" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="-141" cy="-1742" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="-246" cy="-2442" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="-462" cy="-3860" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="-1127" cy="-8194" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="60361" cy="390805" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1472" cy="8641" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="849" cy="4579" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="640" cy="3211" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="538" cy="2527" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="477" cy="2118" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="438" cy="1848" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="411" cy="1657" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="391" cy="1516" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="377" cy="1407" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="366" cy="1322" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="357" cy="1254" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="351" cy="1198" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="345" cy="1152" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="341" cy="1113" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="338" cy="1081" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="335" cy="1053" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="333" cy="1030" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="331" cy="1010" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="330" cy="994" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="329" cy="979" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="328" cy="967" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="328" cy="957" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="327" cy="949" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="327" cy="942" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="327" cy="936" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="327" cy="932" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="327" cy="929" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="327" cy="927" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="327" cy="927" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="327" cy="927" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="327" cy="929" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="327" cy="932" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="327" cy="936" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="326" cy="942" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="326" cy="949" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="326" cy="957" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="325" cy="967" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="324" cy="979" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="323" cy="994" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="322" cy="1010" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="320" cy="1030" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="318" cy="1053" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="316" cy="1081" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="312" cy="1113" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="308" cy="1152" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="303" cy="1198" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="296" cy="1254" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="288" cy="1322" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="277" cy="1407" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="262" cy="1516" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="243" cy="1657" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="216" cy="1848" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="176" cy="2118" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="116" cy="2527" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="13" cy="3211" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="-194" cy="4579" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="-818" cy="8641" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="-59707" cy="390805" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1781" cy="-8194" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1116" cy="-3860" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="901" cy="-2442" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="795" cy="-1742" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="734" cy="-1326" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="695" cy="-1053" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="668" cy="-861" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="649" cy="-719" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="636" cy="-612" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="625" cy="-528" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="618" cy="-462" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="612" cy="-409" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="608" cy="-366" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="605" cy="-331" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="603" cy="-304" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="601" cy="-282" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="600" cy="-265" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="600" cy="-252" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="600" cy="-243" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="600" cy="-238" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="600" cy="-236" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="599" cy="-238" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="599" cy="-243" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="599" cy="-252" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="599" cy="-265" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="598" cy="-282" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="596" cy="-304" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="594" cy="-331" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="591" cy="-366" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="587" cy="-409" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="581" cy="-462" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="574" cy="-528" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="563" cy="-612" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="550" cy="-719" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="531" cy="-861" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="504" cy="-1053" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="465" cy="-1326" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="404" cy="-1742" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="298" cy="-2442" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="83" cy="-3860" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="-581" cy="-8194" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="60907" cy="390805" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="2018" cy="8641" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1394" cy="4579" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1186" cy="3211" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1083" cy="2527" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1023" cy="2118" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="983" cy="1848" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="956" cy="1657" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="937" cy="1516" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="922" cy="1407" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="911" cy="1322" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="903" cy="1254" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="896" cy="1198" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="891" cy="1152" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="887" cy="1113" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="883" cy="1081" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="881" cy="1053" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="879" cy="1030" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="877" cy="1010" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="876" cy="994" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="875" cy="979" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="874" cy="967" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="873" cy="957" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="873" cy="949" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="873" cy="942" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="872" cy="936" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="872" cy="932" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="872" cy="929" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="872" cy="927" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="872" cy="927" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="872" cy="927" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="872" cy="929" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="872" cy="932" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="872" cy="936" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="872" cy="942" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="872" cy="949" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="871" cy="957" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="871" cy="967" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="870" cy="979" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="869" cy="994" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="868" cy="1010" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="866" cy="1030" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="864" cy="1053" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="861" cy="1081" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="858" cy="1113" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="854" cy="1152" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="848" cy="1198" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="842" cy="1254" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="833" cy="1322" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="822" cy="1407" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="808" cy="1516" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="788" cy="1657" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="761" cy="1848" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="722" cy="2118" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="661" cy="2527" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="559" cy="3211" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="350" cy="4579" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="-272" cy="8641" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="-59161" cy="390805" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="2327" cy="-8194" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1662" cy="-3860" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1446" cy="-2442" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1341" cy="-1742" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1280" cy="-1326" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1241" cy="-1053" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1214" cy="-861" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1195" cy="-719" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1181" cy="-612" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1171" cy="-528" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1163" cy="-462" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1158" cy="-409" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1153" cy="-366" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1150" cy="-331" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1148" cy="-304" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1147" cy="-282" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1146" cy="-265" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1145" cy="-252" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1145" cy="-243" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1145" cy="-238" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1145" cy="-236" r="3"/>
+<!-- *** End: curves/Trochoid/Numerical_Evolute&ndash;1.0&ndash;&ndash;0.75&ndash;0.0&ndash;200.svg *** -->
+<!-- *** Start: curves/Trochoid/Curve&ndash;1.0&ndash;0.0&ndash;0.0&ndash;200.svg *** -->
+<polyline class="Curve_Conn" points="
+   54 200, 54 200, 54 200, 54 199, 54 198, 54 196, 55 194, 55 192, 56 189, 57 186,
+   58 183, 59 180, 60 176, 62 172, 64 168, 66 163, 68 158, 71 153, 74 148, 77 143,
+   81 138, 85 132, 89 127, 93 121, 98 115, 104 110, 109 104, 115 98, 121 93, 128 87,
+   135 81, 142 76, 150 71, 158 66, 166 61, 175 56, 184 52, 193 47, 202 43, 211 40,
+   221 36, 231 33, 241 30, 252 27, 262 25, 273 23, 283 22, 294 20, 305 19, 316 19,
+   327 19, 338 19, 349 19, 359 20, 370 22, 381 23, 391 25, 402 27, 412 30, 422 33,
+   432 36, 442 40, 452 43, 461 47, 470 52, 479 56, 487 61, 496 66, 504 71, 511 76,
+   518 81, 525 87, 532 93, 538 98, 544 104, 550 110, 555 115, 560 121, 565 127, 569 132,
+   573 138, 577 143, 580 148, 583 153, 586 158, 588 163, 590 168, 592 172, 593 176, 595 180,
+   596 183, 597 186, 598 189, 598 192, 599 194, 599 196, 599 198, 599 199, 599 200, 599 200,
+   599 200, 600 200, 600 200, 600 199, 600 198, 600 196, 600 194, 601 192, 601 189, 602 186,
+   603 183, 604 180, 606 176, 607 172, 609 168, 611 163, 613 158, 616 153, 619 148, 622 143,
+   626 138, 630 132, 634 127, 639 121, 644 115, 649 110, 655 104, 661 98, 667 93, 674 87,
+   681 81, 688 76, 695 71, 703 66, 712 61, 720 56, 729 52, 738 47, 747 43, 757 40,
+   767 36, 777 33, 787 30, 797 27, 808 25, 818 23, 829 22, 840 20, 850 19, 861 19,
+   872 19, 883 19, 894 19, 905 20, 916 22, 926 23, 937 25, 947 27, 958 30, 968 33,
+   978 36, 988 40, 997 43, 1006 47, 1015 52, 1024 56, 1033 61, 1041 66, 1049 71, 1057 76,
+   1064 81, 1071 87, 1078 93, 1084 98, 1090 104, 1095 110, 1101 115, 1106 121, 1110 127, 1114 132,
+   1118 138, 1122 143, 1125 148, 1128 153, 1131 158, 1133 163, 1135 168, 1137 172, 1139 176, 1140 180,
+   1141 183, 1142 186, 1143 189, 1144 192, 1144 194, 1145 196, 1145 198, 1145 199, 1145 200, 1145 200,
+   1145 200"/>
+<circle class="Curve_Mesh" cx="54" cy="200" r="2"/>
+<circle class="Curve_Mesh" cx="54" cy="200" r="2"/>
+<circle class="Curve_Mesh" cx="54" cy="200" r="2"/>
+<circle class="Curve_Mesh" cx="54" cy="199" r="2"/>
+<circle class="Curve_Mesh" cx="54" cy="198" r="2"/>
+<circle class="Curve_Mesh" cx="54" cy="196" r="2"/>
+<circle class="Curve_Mesh" cx="55" cy="194" r="2"/>
+<circle class="Curve_Mesh" cx="55" cy="192" r="2"/>
+<circle class="Curve_Mesh" cx="56" cy="189" r="2"/>
+<circle class="Curve_Mesh" cx="57" cy="186" r="2"/>
+<circle class="Curve_Mesh" cx="58" cy="183" r="2"/>
+<circle class="Curve_Mesh" cx="59" cy="180" r="2"/>
+<circle class="Curve_Mesh" cx="60" cy="176" r="2"/>
+<circle class="Curve_Mesh" cx="62" cy="172" r="2"/>
+<circle class="Curve_Mesh" cx="64" cy="168" r="2"/>
+<circle class="Curve_Mesh" cx="66" cy="163" r="2"/>
+<circle class="Curve_Mesh" cx="68" cy="158" r="2"/>
+<circle class="Curve_Mesh" cx="71" cy="153" r="2"/>
+<circle class="Curve_Mesh" cx="74" cy="148" r="2"/>
+<circle class="Curve_Mesh" cx="77" cy="143" r="2"/>
+<circle class="Curve_Mesh" cx="81" cy="138" r="2"/>
+<circle class="Curve_Mesh" cx="85" cy="132" r="2"/>
+<circle class="Curve_Mesh" cx="89" cy="127" r="2"/>
+<circle class="Curve_Mesh" cx="93" cy="121" r="2"/>
+<circle class="Curve_Mesh" cx="98" cy="115" r="2"/>
+<circle class="Curve_Mesh" cx="104" cy="110" r="2"/>
+<circle class="Curve_Mesh" cx="109" cy="104" r="2"/>
+<circle class="Curve_Mesh" cx="115" cy="98" r="2"/>
+<circle class="Curve_Mesh" cx="121" cy="93" r="2"/>
+<circle class="Curve_Mesh" cx="128" cy="87" r="2"/>
+<circle class="Curve_Mesh" cx="135" cy="81" r="2"/>
+<circle class="Curve_Mesh" cx="142" cy="76" r="2"/>
+<circle class="Curve_Mesh" cx="150" cy="71" r="2"/>
+<circle class="Curve_Mesh" cx="158" cy="66" r="2"/>
+<circle class="Curve_Mesh" cx="166" cy="61" r="2"/>
+<circle class="Curve_Mesh" cx="175" cy="56" r="2"/>
+<circle class="Curve_Mesh" cx="184" cy="52" r="2"/>
+<circle class="Curve_Mesh" cx="193" cy="47" r="2"/>
+<circle class="Curve_Mesh" cx="202" cy="43" r="2"/>
+<circle class="Curve_Mesh" cx="211" cy="40" r="2"/>
+<circle class="Curve_Mesh" cx="221" cy="36" r="2"/>
+<circle class="Curve_Mesh" cx="231" cy="33" r="2"/>
+<circle class="Curve_Mesh" cx="241" cy="30" r="2"/>
+<circle class="Curve_Mesh" cx="252" cy="27" r="2"/>
+<circle class="Curve_Mesh" cx="262" cy="25" r="2"/>
+<circle class="Curve_Mesh" cx="273" cy="23" r="2"/>
+<circle class="Curve_Mesh" cx="283" cy="22" r="2"/>
+<circle class="Curve_Mesh" cx="294" cy="20" r="2"/>
+<circle class="Curve_Mesh" cx="305" cy="19" r="2"/>
+<circle class="Curve_Mesh" cx="316" cy="19" r="2"/>
+<circle class="Curve_Mesh" cx="327" cy="19" r="2"/>
+<circle class="Curve_Mesh" cx="338" cy="19" r="2"/>
+<circle class="Curve_Mesh" cx="349" cy="19" r="2"/>
+<circle class="Curve_Mesh" cx="359" cy="20" r="2"/>
+<circle class="Curve_Mesh" cx="370" cy="22" r="2"/>
+<circle class="Curve_Mesh" cx="381" cy="23" r="2"/>
+<circle class="Curve_Mesh" cx="391" cy="25" r="2"/>
+<circle class="Curve_Mesh" cx="402" cy="27" r="2"/>
+<circle class="Curve_Mesh" cx="412" cy="30" r="2"/>
+<circle class="Curve_Mesh" cx="422" cy="33" r="2"/>
+<circle class="Curve_Mesh" cx="432" cy="36" r="2"/>
+<circle class="Curve_Mesh" cx="442" cy="40" r="2"/>
+<circle class="Curve_Mesh" cx="452" cy="43" r="2"/>
+<circle class="Curve_Mesh" cx="461" cy="47" r="2"/>
+<circle class="Curve_Mesh" cx="470" cy="52" r="2"/>
+<circle class="Curve_Mesh" cx="479" cy="56" r="2"/>
+<circle class="Curve_Mesh" cx="487" cy="61" r="2"/>
+<circle class="Curve_Mesh" cx="496" cy="66" r="2"/>
+<circle class="Curve_Mesh" cx="504" cy="71" r="2"/>
+<circle class="Curve_Mesh" cx="511" cy="76" r="2"/>
+<circle class="Curve_Mesh" cx="518" cy="81" r="2"/>
+<circle class="Curve_Mesh" cx="525" cy="87" r="2"/>
+<circle class="Curve_Mesh" cx="532" cy="93" r="2"/>
+<circle class="Curve_Mesh" cx="538" cy="98" r="2"/>
+<circle class="Curve_Mesh" cx="544" cy="104" r="2"/>
+<circle class="Curve_Mesh" cx="550" cy="110" r="2"/>
+<circle class="Curve_Mesh" cx="555" cy="115" r="2"/>
+<circle class="Curve_Mesh" cx="560" cy="121" r="2"/>
+<circle class="Curve_Mesh" cx="565" cy="127" r="2"/>
+<circle class="Curve_Mesh" cx="569" cy="132" r="2"/>
+<circle class="Curve_Mesh" cx="573" cy="138" r="2"/>
+<circle class="Curve_Mesh" cx="577" cy="143" r="2"/>
+<circle class="Curve_Mesh" cx="580" cy="148" r="2"/>
+<circle class="Curve_Mesh" cx="583" cy="153" r="2"/>
+<circle class="Curve_Mesh" cx="586" cy="158" r="2"/>
+<circle class="Curve_Mesh" cx="588" cy="163" r="2"/>
+<circle class="Curve_Mesh" cx="590" cy="168" r="2"/>
+<circle class="Curve_Mesh" cx="592" cy="172" r="2"/>
+<circle class="Curve_Mesh" cx="593" cy="176" r="2"/>
+<circle class="Curve_Mesh" cx="595" cy="180" r="2"/>
+<circle class="Curve_Mesh" cx="596" cy="183" r="2"/>
+<circle class="Curve_Mesh" cx="597" cy="186" r="2"/>
+<circle class="Curve_Mesh" cx="598" cy="189" r="2"/>
+<circle class="Curve_Mesh" cx="598" cy="192" r="2"/>
+<circle class="Curve_Mesh" cx="599" cy="194" r="2"/>
+<circle class="Curve_Mesh" cx="599" cy="196" r="2"/>
+<circle class="Curve_Mesh" cx="599" cy="198" r="2"/>
+<circle class="Curve_Mesh" cx="599" cy="199" r="2"/>
+<circle class="Curve_Mesh" cx="599" cy="200" r="2"/>
+<circle class="Curve_Mesh" cx="599" cy="200" r="2"/>
+<circle class="Curve_Mesh" cx="599" cy="200" r="2"/>
+<circle class="Curve_Mesh" cx="600" cy="200" r="2"/>
+<circle class="Curve_Mesh" cx="600" cy="200" r="2"/>
+<circle class="Curve_Mesh" cx="600" cy="199" r="2"/>
+<circle class="Curve_Mesh" cx="600" cy="198" r="2"/>
+<circle class="Curve_Mesh" cx="600" cy="196" r="2"/>
+<circle class="Curve_Mesh" cx="600" cy="194" r="2"/>
+<circle class="Curve_Mesh" cx="601" cy="192" r="2"/>
+<circle class="Curve_Mesh" cx="601" cy="189" r="2"/>
+<circle class="Curve_Mesh" cx="602" cy="186" r="2"/>
+<circle class="Curve_Mesh" cx="603" cy="183" r="2"/>
+<circle class="Curve_Mesh" cx="604" cy="180" r="2"/>
+<circle class="Curve_Mesh" cx="606" cy="176" r="2"/>
+<circle class="Curve_Mesh" cx="607" cy="172" r="2"/>
+<circle class="Curve_Mesh" cx="609" cy="168" r="2"/>
+<circle class="Curve_Mesh" cx="611" cy="163" r="2"/>
+<circle class="Curve_Mesh" cx="613" cy="158" r="2"/>
+<circle class="Curve_Mesh" cx="616" cy="153" r="2"/>
+<circle class="Curve_Mesh" cx="619" cy="148" r="2"/>
+<circle class="Curve_Mesh" cx="622" cy="143" r="2"/>
+<circle class="Curve_Mesh" cx="626" cy="138" r="2"/>
+<circle class="Curve_Mesh" cx="630" cy="132" r="2"/>
+<circle class="Curve_Mesh" cx="634" cy="127" r="2"/>
+<circle class="Curve_Mesh" cx="639" cy="121" r="2"/>
+<circle class="Curve_Mesh" cx="644" cy="115" r="2"/>
+<circle class="Curve_Mesh" cx="649" cy="110" r="2"/>
+<circle class="Curve_Mesh" cx="655" cy="104" r="2"/>
+<circle class="Curve_Mesh" cx="661" cy="98" r="2"/>
+<circle class="Curve_Mesh" cx="667" cy="93" r="2"/>
+<circle class="Curve_Mesh" cx="674" cy="87" r="2"/>
+<circle class="Curve_Mesh" cx="681" cy="81" r="2"/>
+<circle class="Curve_Mesh" cx="688" cy="76" r="2"/>
+<circle class="Curve_Mesh" cx="695" cy="71" r="2"/>
+<circle class="Curve_Mesh" cx="703" cy="66" r="2"/>
+<circle class="Curve_Mesh" cx="712" cy="61" r="2"/>
+<circle class="Curve_Mesh" cx="720" cy="56" r="2"/>
+<circle class="Curve_Mesh" cx="729" cy="52" r="2"/>
+<circle class="Curve_Mesh" cx="738" cy="47" r="2"/>
+<circle class="Curve_Mesh" cx="747" cy="43" r="2"/>
+<circle class="Curve_Mesh" cx="757" cy="40" r="2"/>
+<circle class="Curve_Mesh" cx="767" cy="36" r="2"/>
+<circle class="Curve_Mesh" cx="777" cy="33" r="2"/>
+<circle class="Curve_Mesh" cx="787" cy="30" r="2"/>
+<circle class="Curve_Mesh" cx="797" cy="27" r="2"/>
+<circle class="Curve_Mesh" cx="808" cy="25" r="2"/>
+<circle class="Curve_Mesh" cx="818" cy="23" r="2"/>
+<circle class="Curve_Mesh" cx="829" cy="22" r="2"/>
+<circle class="Curve_Mesh" cx="840" cy="20" r="2"/>
+<circle class="Curve_Mesh" cx="850" cy="19" r="2"/>
+<circle class="Curve_Mesh" cx="861" cy="19" r="2"/>
+<circle class="Curve_Mesh" cx="872" cy="19" r="2"/>
+<circle class="Curve_Mesh" cx="883" cy="19" r="2"/>
+<circle class="Curve_Mesh" cx="894" cy="19" r="2"/>
+<circle class="Curve_Mesh" cx="905" cy="20" r="2"/>
+<circle class="Curve_Mesh" cx="916" cy="22" r="2"/>
+<circle class="Curve_Mesh" cx="926" cy="23" r="2"/>
+<circle class="Curve_Mesh" cx="937" cy="25" r="2"/>
+<circle class="Curve_Mesh" cx="947" cy="27" r="2"/>
+<circle class="Curve_Mesh" cx="958" cy="30" r="2"/>
+<circle class="Curve_Mesh" cx="968" cy="33" r="2"/>
+<circle class="Curve_Mesh" cx="978" cy="36" r="2"/>
+<circle class="Curve_Mesh" cx="988" cy="40" r="2"/>
+<circle class="Curve_Mesh" cx="997" cy="43" r="2"/>
+<circle class="Curve_Mesh" cx="1006" cy="47" r="2"/>
+<circle class="Curve_Mesh" cx="1015" cy="52" r="2"/>
+<circle class="Curve_Mesh" cx="1024" cy="56" r="2"/>
+<circle class="Curve_Mesh" cx="1033" cy="61" r="2"/>
+<circle class="Curve_Mesh" cx="1041" cy="66" r="2"/>
+<circle class="Curve_Mesh" cx="1049" cy="71" r="2"/>
+<circle class="Curve_Mesh" cx="1057" cy="76" r="2"/>
+<circle class="Curve_Mesh" cx="1064" cy="81" r="2"/>
+<circle class="Curve_Mesh" cx="1071" cy="87" r="2"/>
+<circle class="Curve_Mesh" cx="1078" cy="93" r="2"/>
+<circle class="Curve_Mesh" cx="1084" cy="98" r="2"/>
+<circle class="Curve_Mesh" cx="1090" cy="104" r="2"/>
+<circle class="Curve_Mesh" cx="1095" cy="110" r="2"/>
+<circle class="Curve_Mesh" cx="1101" cy="115" r="2"/>
+<circle class="Curve_Mesh" cx="1106" cy="121" r="2"/>
+<circle class="Curve_Mesh" cx="1110" cy="127" r="2"/>
+<circle class="Curve_Mesh" cx="1114" cy="132" r="2"/>
+<circle class="Curve_Mesh" cx="1118" cy="138" r="2"/>
+<circle class="Curve_Mesh" cx="1122" cy="143" r="2"/>
+<circle class="Curve_Mesh" cx="1125" cy="148" r="2"/>
+<circle class="Curve_Mesh" cx="1128" cy="153" r="2"/>
+<circle class="Curve_Mesh" cx="1131" cy="158" r="2"/>
+<circle class="Curve_Mesh" cx="1133" cy="163" r="2"/>
+<circle class="Curve_Mesh" cx="1135" cy="168" r="2"/>
+<circle class="Curve_Mesh" cx="1137" cy="172" r="2"/>
+<circle class="Curve_Mesh" cx="1139" cy="176" r="2"/>
+<circle class="Curve_Mesh" cx="1140" cy="180" r="2"/>
+<circle class="Curve_Mesh" cx="1141" cy="183" r="2"/>
+<circle class="Curve_Mesh" cx="1142" cy="186" r="2"/>
+<circle class="Curve_Mesh" cx="1143" cy="189" r="2"/>
+<circle class="Curve_Mesh" cx="1144" cy="192" r="2"/>
+<circle class="Curve_Mesh" cx="1144" cy="194" r="2"/>
+<circle class="Curve_Mesh" cx="1145" cy="196" r="2"/>
+<circle class="Curve_Mesh" cx="1145" cy="198" r="2"/>
+<circle class="Curve_Mesh" cx="1145" cy="199" r="2"/>
+<circle class="Curve_Mesh" cx="1145" cy="200" r="2"/>
+<circle class="Curve_Mesh" cx="1145" cy="200" r="2"/>
+<circle class="Curve_Mesh" cx="1145" cy="200" r="2"/>
+<!-- *** End: curves/Trochoid/Curve&ndash;1.0&ndash;0.0&ndash;0.0&ndash;200.svg *** -->
+<!-- *** Start: curves/Trochoid/Numerical_Evolute&ndash;1.0&ndash;0.0&ndash;0.0&ndash;200.svg *** -->
+<polyline class="Numerical_Evolute_Conn" cx="1145" cy="200" points="
+   54 200, 65 201, 76 201, 87 202, 97 203, 108 205, 119 207, 129 209, 140 212, 150 215,
+   160 218, 169 221, 179 225, 188 229, 197 233, 206 238, 215 243, 223 248, 231 253, 238 258,
+   246 263, 253 269, 259 274, 266 280, 272 286, 277 291, 283 297, 287 303, 292 308, 296 314,
+   300 320, 304 325, 307 330, 310 335, 313 340, 315 345, 317 349, 319 354, 321 358, 322 361,
+   323 365, 324 368, 325 371, 326 374, 326 376, 326 378, 327 379, 327 381, 327 382, 327 382,
+   327 382, 327 382, 327 382, 327 381, 327 379, 327 378, 328 376, 328 374, 329 371, 329 368,
+   330 365, 331 361, 333 358, 334 354, 336 349, 338 345, 341 340, 343 335, 346 330, 350 325,
+   353 320, 357 314, 361 308, 366 303, 371 297, 376 291, 382 286, 388 280, 394 274, 401 269,
+   408 263, 415 258, 423 253, 431 248, 439 243, 447 238, 456 233, 465 229, 475 225, 484 221,
+   494 218, 504 215, 514 212, 524 209, 535 207, 545 205, 556 203, 567 202, 578 201, 589 201,
+   599 200, 610 201, 621 201, 632 202, 643 203, 654 205, 664 207, 675 209, 685 212, 695 215,
+   705 218, 715 221, 724 225, 734 229, 743 233, 752 238, 760 243, 768 248, 776 253, 784 258,
+   791 263, 798 269, 805 274, 811 280, 817 286, 823 291, 828 297, 833 303, 838 308, 842 314,
+   846 320, 849 325, 853 330, 856 335, 858 340, 861 345, 863 349, 865 354, 866 358, 868 361,
+   869 365, 870 368, 870 371, 871 374, 871 376, 872 378, 872 379, 872 381, 872 382, 872 382,
+   872 382, 872 382, 872 382, 872 381, 872 379, 873 378, 873 376, 873 374, 874 371, 875 368,
+   876 365, 877 361, 878 358, 880 354, 882 349, 884 345, 886 340, 889 335, 892 330, 895 325,
+   899 320, 903 314, 907 308, 912 303, 916 297, 922 291, 927 286, 933 280, 940 274, 946 269,
+   953 263, 961 258, 968 253, 976 248, 984 243, 993 238, 1002 233, 1011 229, 1020 225, 1030 221,
+   1039 218, 1049 215, 1059 212, 1070 209, 1080 207, 1091 205, 1102 203, 1112 202, 1123 201, 1134 201,
+   1145 200" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="54" cy="200" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="65" cy="201" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="76" cy="201" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="87" cy="202" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="97" cy="203" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="108" cy="205" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="119" cy="207" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="129" cy="209" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="140" cy="212" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="150" cy="215" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="160" cy="218" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="169" cy="221" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="179" cy="225" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="188" cy="229" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="197" cy="233" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="206" cy="238" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="215" cy="243" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="223" cy="248" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="231" cy="253" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="238" cy="258" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="246" cy="263" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="253" cy="269" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="259" cy="274" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="266" cy="280" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="272" cy="286" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="277" cy="291" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="283" cy="297" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="287" cy="303" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="292" cy="308" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="296" cy="314" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="300" cy="320" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="304" cy="325" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="307" cy="330" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="310" cy="335" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="313" cy="340" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="315" cy="345" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="317" cy="349" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="319" cy="354" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="321" cy="358" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="322" cy="361" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="323" cy="365" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="324" cy="368" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="325" cy="371" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="326" cy="374" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="326" cy="376" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="326" cy="378" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="327" cy="379" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="327" cy="381" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="327" cy="382" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="327" cy="382" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="327" cy="382" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="327" cy="382" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="327" cy="382" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="327" cy="381" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="327" cy="379" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="327" cy="378" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="328" cy="376" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="328" cy="374" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="329" cy="371" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="329" cy="368" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="330" cy="365" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="331" cy="361" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="333" cy="358" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="334" cy="354" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="336" cy="349" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="338" cy="345" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="341" cy="340" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="343" cy="335" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="346" cy="330" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="350" cy="325" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="353" cy="320" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="357" cy="314" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="361" cy="308" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="366" cy="303" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="371" cy="297" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="376" cy="291" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="382" cy="286" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="388" cy="280" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="394" cy="274" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="401" cy="269" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="408" cy="263" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="415" cy="258" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="423" cy="253" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="431" cy="248" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="439" cy="243" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="447" cy="238" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="456" cy="233" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="465" cy="229" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="475" cy="225" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="484" cy="221" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="494" cy="218" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="504" cy="215" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="514" cy="212" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="524" cy="209" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="535" cy="207" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="545" cy="205" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="556" cy="203" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="567" cy="202" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="578" cy="201" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="589" cy="201" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="599" cy="200" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="610" cy="201" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="621" cy="201" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="632" cy="202" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="643" cy="203" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="654" cy="205" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="664" cy="207" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="675" cy="209" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="685" cy="212" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="695" cy="215" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="705" cy="218" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="715" cy="221" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="724" cy="225" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="734" cy="229" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="743" cy="233" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="752" cy="238" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="760" cy="243" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="768" cy="248" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="776" cy="253" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="784" cy="258" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="791" cy="263" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="798" cy="269" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="805" cy="274" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="811" cy="280" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="817" cy="286" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="823" cy="291" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="828" cy="297" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="833" cy="303" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="838" cy="308" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="842" cy="314" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="846" cy="320" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="849" cy="325" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="853" cy="330" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="856" cy="335" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="858" cy="340" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="861" cy="345" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="863" cy="349" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="865" cy="354" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="866" cy="358" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="868" cy="361" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="869" cy="365" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="870" cy="368" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="870" cy="371" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="871" cy="374" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="871" cy="376" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="872" cy="378" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="872" cy="379" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="872" cy="381" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="872" cy="382" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="872" cy="382" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="872" cy="382" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="872" cy="382" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="872" cy="382" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="872" cy="381" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="872" cy="379" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="873" cy="378" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="873" cy="376" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="873" cy="374" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="874" cy="371" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="875" cy="368" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="876" cy="365" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="877" cy="361" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="878" cy="358" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="880" cy="354" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="882" cy="349" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="884" cy="345" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="886" cy="340" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="889" cy="335" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="892" cy="330" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="895" cy="325" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="899" cy="320" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="903" cy="314" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="907" cy="308" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="912" cy="303" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="916" cy="297" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="922" cy="291" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="927" cy="286" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="933" cy="280" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="940" cy="274" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="946" cy="269" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="953" cy="263" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="961" cy="258" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="968" cy="253" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="976" cy="248" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="984" cy="243" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="993" cy="238" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1002" cy="233" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1011" cy="229" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1020" cy="225" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1030" cy="221" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1039" cy="218" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1049" cy="215" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1059" cy="212" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1070" cy="209" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1080" cy="207" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1091" cy="205" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1102" cy="203" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1112" cy="202" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1123" cy="201" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1134" cy="201" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1145" cy="200" r="3"/>
+<!-- *** End: curves/Trochoid/Numerical_Evolute&ndash;1.0&ndash;0.0&ndash;0.0&ndash;200.svg *** -->
+<!-- *** Start: curves/Trochoid/Curve&ndash;1.0&ndash;0.75&ndash;0.0&ndash;200.svg *** -->
+<polyline class="Curve_Conn" points="
+   92 250, 88 250, 85 249, 81 248, 77 246, 74 244, 71 242, 68 239, 65 236, 62 232,
+   60 228, 58 224, 56 219, 55 214, 54 208, 54 202, 54 196, 55 190, 56 184, 57 177,
+   59 170, 62 163, 65 156, 69 149, 73 142, 78 134, 83 127, 89 120, 96 113, 103 106,
+   110 99, 118 92, 127 85, 136 79, 145 72, 155 66, 166 61, 177 55, 188 50, 200 45,
+   212 41, 225 37, 237 33, 250 30, 263 27, 277 24, 290 22, 304 21, 318 20, 332 19,
+   346 19, 360 19, 374 20, 388 21, 401 22, 415 24, 428 27, 442 30, 455 33, 467 37,
+   480 41, 492 45, 503 50, 515 55, 526 61, 536 66, 546 72, 556 79, 565 85, 574 92,
+   582 99, 589 106, 596 113, 603 120, 609 127, 614 134, 619 142, 623 149, 627 156, 630 163,
+   632 170, 634 177, 636 184, 637 190, 638 196, 638 202, 637 208, 637 214, 635 219, 634 224,
+   632 228, 630 232, 627 236, 624 239, 621 242, 618 244, 614 246, 611 248, 607 249, 603 250,
+   600 250, 596 250, 592 249, 588 248, 585 246, 581 244, 578 242, 575 239, 572 236, 569 232,
+   567 228, 565 224, 564 219, 562 214, 562 208, 561 202, 561 196, 562 190, 563 184, 565 177,
+   567 170, 569 163, 572 156, 576 149, 580 142, 585 134, 590 127, 596 120, 603 113, 610 106,
+   617 99, 625 92, 634 85, 643 79, 653 72, 663 66, 673 61, 684 55, 696 50, 707 45,
+   719 41, 732 37, 744 33, 757 30, 771 27, 784 24, 798 22, 811 21, 825 20, 839 19,
+   853 19, 867 19, 881 20, 895 21, 909 22, 922 24, 936 27, 949 30, 962 33, 974 37,
+   987 41, 999 45, 1011 50, 1022 55, 1033 61, 1044 66, 1054 72, 1063 79, 1072 85, 1081 92,
+   1089 99, 1096 106, 1103 113, 1110 120, 1116 127, 1121 134, 1126 142, 1130 149, 1134 156, 1137 163,
+   1140 170, 1142 177, 1143 184, 1144 190, 1145 196, 1145 202, 1145 208, 1144 214, 1143 219, 1141 224,
+   1139 228, 1137 232, 1134 236, 1131 239, 1128 242, 1125 244, 1122 246, 1118 248, 1114 249, 1111 250,
+   1107 250"/>
+<circle class="Curve_Mesh" cx="92" cy="250" r="2"/>
+<circle class="Curve_Mesh" cx="88" cy="250" r="2"/>
+<circle class="Curve_Mesh" cx="85" cy="249" r="2"/>
+<circle class="Curve_Mesh" cx="81" cy="248" r="2"/>
+<circle class="Curve_Mesh" cx="77" cy="246" r="2"/>
+<circle class="Curve_Mesh" cx="74" cy="244" r="2"/>
+<circle class="Curve_Mesh" cx="71" cy="242" r="2"/>
+<circle class="Curve_Mesh" cx="68" cy="239" r="2"/>
+<circle class="Curve_Mesh" cx="65" cy="236" r="2"/>
+<circle class="Curve_Mesh" cx="62" cy="232" r="2"/>
+<circle class="Curve_Mesh" cx="60" cy="228" r="2"/>
+<circle class="Curve_Mesh" cx="58" cy="224" r="2"/>
+<circle class="Curve_Mesh" cx="56" cy="219" r="2"/>
+<circle class="Curve_Mesh" cx="55" cy="214" r="2"/>
+<circle class="Curve_Mesh" cx="54" cy="208" r="2"/>
+<circle class="Curve_Mesh" cx="54" cy="202" r="2"/>
+<circle class="Curve_Mesh" cx="54" cy="196" r="2"/>
+<circle class="Curve_Mesh" cx="55" cy="190" r="2"/>
+<circle class="Curve_Mesh" cx="56" cy="184" r="2"/>
+<circle class="Curve_Mesh" cx="57" cy="177" r="2"/>
+<circle class="Curve_Mesh" cx="59" cy="170" r="2"/>
+<circle class="Curve_Mesh" cx="62" cy="163" r="2"/>
+<circle class="Curve_Mesh" cx="65" cy="156" r="2"/>
+<circle class="Curve_Mesh" cx="69" cy="149" r="2"/>
+<circle class="Curve_Mesh" cx="73" cy="142" r="2"/>
+<circle class="Curve_Mesh" cx="78" cy="134" r="2"/>
+<circle class="Curve_Mesh" cx="83" cy="127" r="2"/>
+<circle class="Curve_Mesh" cx="89" cy="120" r="2"/>
+<circle class="Curve_Mesh" cx="96" cy="113" r="2"/>
+<circle class="Curve_Mesh" cx="103" cy="106" r="2"/>
+<circle class="Curve_Mesh" cx="110" cy="99" r="2"/>
+<circle class="Curve_Mesh" cx="118" cy="92" r="2"/>
+<circle class="Curve_Mesh" cx="127" cy="85" r="2"/>
+<circle class="Curve_Mesh" cx="136" cy="79" r="2"/>
+<circle class="Curve_Mesh" cx="145" cy="72" r="2"/>
+<circle class="Curve_Mesh" cx="155" cy="66" r="2"/>
+<circle class="Curve_Mesh" cx="166" cy="61" r="2"/>
+<circle class="Curve_Mesh" cx="177" cy="55" r="2"/>
+<circle class="Curve_Mesh" cx="188" cy="50" r="2"/>
+<circle class="Curve_Mesh" cx="200" cy="45" r="2"/>
+<circle class="Curve_Mesh" cx="212" cy="41" r="2"/>
+<circle class="Curve_Mesh" cx="225" cy="37" r="2"/>
+<circle class="Curve_Mesh" cx="237" cy="33" r="2"/>
+<circle class="Curve_Mesh" cx="250" cy="30" r="2"/>
+<circle class="Curve_Mesh" cx="263" cy="27" r="2"/>
+<circle class="Curve_Mesh" cx="277" cy="24" r="2"/>
+<circle class="Curve_Mesh" cx="290" cy="22" r="2"/>
+<circle class="Curve_Mesh" cx="304" cy="21" r="2"/>
+<circle class="Curve_Mesh" cx="318" cy="20" r="2"/>
+<circle class="Curve_Mesh" cx="332" cy="19" r="2"/>
+<circle class="Curve_Mesh" cx="346" cy="19" r="2"/>
+<circle class="Curve_Mesh" cx="360" cy="19" r="2"/>
+<circle class="Curve_Mesh" cx="374" cy="20" r="2"/>
+<circle class="Curve_Mesh" cx="388" cy="21" r="2"/>
+<circle class="Curve_Mesh" cx="401" cy="22" r="2"/>
+<circle class="Curve_Mesh" cx="415" cy="24" r="2"/>
+<circle class="Curve_Mesh" cx="428" cy="27" r="2"/>
+<circle class="Curve_Mesh" cx="442" cy="30" r="2"/>
+<circle class="Curve_Mesh" cx="455" cy="33" r="2"/>
+<circle class="Curve_Mesh" cx="467" cy="37" r="2"/>
+<circle class="Curve_Mesh" cx="480" cy="41" r="2"/>
+<circle class="Curve_Mesh" cx="492" cy="45" r="2"/>
+<circle class="Curve_Mesh" cx="503" cy="50" r="2"/>
+<circle class="Curve_Mesh" cx="515" cy="55" r="2"/>
+<circle class="Curve_Mesh" cx="526" cy="61" r="2"/>
+<circle class="Curve_Mesh" cx="536" cy="66" r="2"/>
+<circle class="Curve_Mesh" cx="546" cy="72" r="2"/>
+<circle class="Curve_Mesh" cx="556" cy="79" r="2"/>
+<circle class="Curve_Mesh" cx="565" cy="85" r="2"/>
+<circle class="Curve_Mesh" cx="574" cy="92" r="2"/>
+<circle class="Curve_Mesh" cx="582" cy="99" r="2"/>
+<circle class="Curve_Mesh" cx="589" cy="106" r="2"/>
+<circle class="Curve_Mesh" cx="596" cy="113" r="2"/>
+<circle class="Curve_Mesh" cx="603" cy="120" r="2"/>
+<circle class="Curve_Mesh" cx="609" cy="127" r="2"/>
+<circle class="Curve_Mesh" cx="614" cy="134" r="2"/>
+<circle class="Curve_Mesh" cx="619" cy="142" r="2"/>
+<circle class="Curve_Mesh" cx="623" cy="149" r="2"/>
+<circle class="Curve_Mesh" cx="627" cy="156" r="2"/>
+<circle class="Curve_Mesh" cx="630" cy="163" r="2"/>
+<circle class="Curve_Mesh" cx="632" cy="170" r="2"/>
+<circle class="Curve_Mesh" cx="634" cy="177" r="2"/>
+<circle class="Curve_Mesh" cx="636" cy="184" r="2"/>
+<circle class="Curve_Mesh" cx="637" cy="190" r="2"/>
+<circle class="Curve_Mesh" cx="638" cy="196" r="2"/>
+<circle class="Curve_Mesh" cx="638" cy="202" r="2"/>
+<circle class="Curve_Mesh" cx="637" cy="208" r="2"/>
+<circle class="Curve_Mesh" cx="637" cy="214" r="2"/>
+<circle class="Curve_Mesh" cx="635" cy="219" r="2"/>
+<circle class="Curve_Mesh" cx="634" cy="224" r="2"/>
+<circle class="Curve_Mesh" cx="632" cy="228" r="2"/>
+<circle class="Curve_Mesh" cx="630" cy="232" r="2"/>
+<circle class="Curve_Mesh" cx="627" cy="236" r="2"/>
+<circle class="Curve_Mesh" cx="624" cy="239" r="2"/>
+<circle class="Curve_Mesh" cx="621" cy="242" r="2"/>
+<circle class="Curve_Mesh" cx="618" cy="244" r="2"/>
+<circle class="Curve_Mesh" cx="614" cy="246" r="2"/>
+<circle class="Curve_Mesh" cx="611" cy="248" r="2"/>
+<circle class="Curve_Mesh" cx="607" cy="249" r="2"/>
+<circle class="Curve_Mesh" cx="603" cy="250" r="2"/>
+<circle class="Curve_Mesh" cx="600" cy="250" r="2"/>
+<circle class="Curve_Mesh" cx="596" cy="250" r="2"/>
+<circle class="Curve_Mesh" cx="592" cy="249" r="2"/>
+<circle class="Curve_Mesh" cx="588" cy="248" r="2"/>
+<circle class="Curve_Mesh" cx="585" cy="246" r="2"/>
+<circle class="Curve_Mesh" cx="581" cy="244" r="2"/>
+<circle class="Curve_Mesh" cx="578" cy="242" r="2"/>
+<circle class="Curve_Mesh" cx="575" cy="239" r="2"/>
+<circle class="Curve_Mesh" cx="572" cy="236" r="2"/>
+<circle class="Curve_Mesh" cx="569" cy="232" r="2"/>
+<circle class="Curve_Mesh" cx="567" cy="228" r="2"/>
+<circle class="Curve_Mesh" cx="565" cy="224" r="2"/>
+<circle class="Curve_Mesh" cx="564" cy="219" r="2"/>
+<circle class="Curve_Mesh" cx="562" cy="214" r="2"/>
+<circle class="Curve_Mesh" cx="562" cy="208" r="2"/>
+<circle class="Curve_Mesh" cx="561" cy="202" r="2"/>
+<circle class="Curve_Mesh" cx="561" cy="196" r="2"/>
+<circle class="Curve_Mesh" cx="562" cy="190" r="2"/>
+<circle class="Curve_Mesh" cx="563" cy="184" r="2"/>
+<circle class="Curve_Mesh" cx="565" cy="177" r="2"/>
+<circle class="Curve_Mesh" cx="567" cy="170" r="2"/>
+<circle class="Curve_Mesh" cx="569" cy="163" r="2"/>
+<circle class="Curve_Mesh" cx="572" cy="156" r="2"/>
+<circle class="Curve_Mesh" cx="576" cy="149" r="2"/>
+<circle class="Curve_Mesh" cx="580" cy="142" r="2"/>
+<circle class="Curve_Mesh" cx="585" cy="134" r="2"/>
+<circle class="Curve_Mesh" cx="590" cy="127" r="2"/>
+<circle class="Curve_Mesh" cx="596" cy="120" r="2"/>
+<circle class="Curve_Mesh" cx="603" cy="113" r="2"/>
+<circle class="Curve_Mesh" cx="610" cy="106" r="2"/>
+<circle class="Curve_Mesh" cx="617" cy="99" r="2"/>
+<circle class="Curve_Mesh" cx="625" cy="92" r="2"/>
+<circle class="Curve_Mesh" cx="634" cy="85" r="2"/>
+<circle class="Curve_Mesh" cx="643" cy="79" r="2"/>
+<circle class="Curve_Mesh" cx="653" cy="72" r="2"/>
+<circle class="Curve_Mesh" cx="663" cy="66" r="2"/>
+<circle class="Curve_Mesh" cx="673" cy="61" r="2"/>
+<circle class="Curve_Mesh" cx="684" cy="55" r="2"/>
+<circle class="Curve_Mesh" cx="696" cy="50" r="2"/>
+<circle class="Curve_Mesh" cx="707" cy="45" r="2"/>
+<circle class="Curve_Mesh" cx="719" cy="41" r="2"/>
+<circle class="Curve_Mesh" cx="732" cy="37" r="2"/>
+<circle class="Curve_Mesh" cx="744" cy="33" r="2"/>
+<circle class="Curve_Mesh" cx="757" cy="30" r="2"/>
+<circle class="Curve_Mesh" cx="771" cy="27" r="2"/>
+<circle class="Curve_Mesh" cx="784" cy="24" r="2"/>
+<circle class="Curve_Mesh" cx="798" cy="22" r="2"/>
+<circle class="Curve_Mesh" cx="811" cy="21" r="2"/>
+<circle class="Curve_Mesh" cx="825" cy="20" r="2"/>
+<circle class="Curve_Mesh" cx="839" cy="19" r="2"/>
+<circle class="Curve_Mesh" cx="853" cy="19" r="2"/>
+<circle class="Curve_Mesh" cx="867" cy="19" r="2"/>
+<circle class="Curve_Mesh" cx="881" cy="20" r="2"/>
+<circle class="Curve_Mesh" cx="895" cy="21" r="2"/>
+<circle class="Curve_Mesh" cx="909" cy="22" r="2"/>
+<circle class="Curve_Mesh" cx="922" cy="24" r="2"/>
+<circle class="Curve_Mesh" cx="936" cy="27" r="2"/>
+<circle class="Curve_Mesh" cx="949" cy="30" r="2"/>
+<circle class="Curve_Mesh" cx="962" cy="33" r="2"/>
+<circle class="Curve_Mesh" cx="974" cy="37" r="2"/>
+<circle class="Curve_Mesh" cx="987" cy="41" r="2"/>
+<circle class="Curve_Mesh" cx="999" cy="45" r="2"/>
+<circle class="Curve_Mesh" cx="1011" cy="50" r="2"/>
+<circle class="Curve_Mesh" cx="1022" cy="55" r="2"/>
+<circle class="Curve_Mesh" cx="1033" cy="61" r="2"/>
+<circle class="Curve_Mesh" cx="1044" cy="66" r="2"/>
+<circle class="Curve_Mesh" cx="1054" cy="72" r="2"/>
+<circle class="Curve_Mesh" cx="1063" cy="79" r="2"/>
+<circle class="Curve_Mesh" cx="1072" cy="85" r="2"/>
+<circle class="Curve_Mesh" cx="1081" cy="92" r="2"/>
+<circle class="Curve_Mesh" cx="1089" cy="99" r="2"/>
+<circle class="Curve_Mesh" cx="1096" cy="106" r="2"/>
+<circle class="Curve_Mesh" cx="1103" cy="113" r="2"/>
+<circle class="Curve_Mesh" cx="1110" cy="120" r="2"/>
+<circle class="Curve_Mesh" cx="1116" cy="127" r="2"/>
+<circle class="Curve_Mesh" cx="1121" cy="134" r="2"/>
+<circle class="Curve_Mesh" cx="1126" cy="142" r="2"/>
+<circle class="Curve_Mesh" cx="1130" cy="149" r="2"/>
+<circle class="Curve_Mesh" cx="1134" cy="156" r="2"/>
+<circle class="Curve_Mesh" cx="1137" cy="163" r="2"/>
+<circle class="Curve_Mesh" cx="1140" cy="170" r="2"/>
+<circle class="Curve_Mesh" cx="1142" cy="177" r="2"/>
+<circle class="Curve_Mesh" cx="1143" cy="184" r="2"/>
+<circle class="Curve_Mesh" cx="1144" cy="190" r="2"/>
+<circle class="Curve_Mesh" cx="1145" cy="196" r="2"/>
+<circle class="Curve_Mesh" cx="1145" cy="202" r="2"/>
+<circle class="Curve_Mesh" cx="1145" cy="208" r="2"/>
+<circle class="Curve_Mesh" cx="1144" cy="214" r="2"/>
+<circle class="Curve_Mesh" cx="1143" cy="219" r="2"/>
+<circle class="Curve_Mesh" cx="1141" cy="224" r="2"/>
+<circle class="Curve_Mesh" cx="1139" cy="228" r="2"/>
+<circle class="Curve_Mesh" cx="1137" cy="232" r="2"/>
+<circle class="Curve_Mesh" cx="1134" cy="236" r="2"/>
+<circle class="Curve_Mesh" cx="1131" cy="239" r="2"/>
+<circle class="Curve_Mesh" cx="1128" cy="242" r="2"/>
+<circle class="Curve_Mesh" cx="1125" cy="244" r="2"/>
+<circle class="Curve_Mesh" cx="1122" cy="246" r="2"/>
+<circle class="Curve_Mesh" cx="1118" cy="248" r="2"/>
+<circle class="Curve_Mesh" cx="1114" cy="249" r="2"/>
+<circle class="Curve_Mesh" cx="1111" cy="250" r="2"/>
+<circle class="Curve_Mesh" cx="1107" cy="250" r="2"/>
+<!-- *** End: curves/Trochoid/Curve&ndash;1.0&ndash;0.75&ndash;0.0&ndash;200.svg *** -->
+<!-- *** Start: curves/Trochoid/Numerical_Evolute&ndash;1.0&ndash;0.75&ndash;0.0&ndash;200.svg *** -->
+<polyline class="Numerical_Evolute_Conn" cx="1107" cy="229" points="
+   92 229, 92 229, 93 228, 93 226, 95 224, 97 221, 100 219, 104 216, 109 213, 115 210,
+   122 207, 130 205, 138 203, 147 202, 157 201, 167 201, 177 201, 187 201, 198 202, 208 204,
+   218 206, 228 209, 238 211, 247 215, 257 218, 265 222, 273 226, 281 230, 289 235, 296 239,
+   302 244, 308 249, 313 253, 318 258, 323 263, 326 267, 330 271, 333 275, 336 279, 338 283,
+   340 287, 342 290, 343 293, 344 295, 345 298, 345 300, 345 301, 346 303, 346 304, 346 304,
+   346 304, 346 304, 346 304, 346 303, 346 301, 347 300, 347 298, 348 295, 349 293, 350 290,
+   352 287, 354 283, 356 279, 359 275, 362 271, 365 267, 369 263, 374 258, 379 253, 384 249,
+   390 244, 396 239, 403 235, 410 230, 418 226, 427 222, 435 218, 444 215, 454 211, 464 209,
+   474 206, 484 204, 494 202, 505 201, 515 201, 525 201, 535 201, 544 202, 554 203, 562 205,
+   570 207, 577 210, 583 213, 588 216, 592 219, 595 221, 597 224, 598 226, 599 228, 599 229,
+   599 229, 600 229, 600 228, 601 226, 602 224, 604 221, 607 219, 611 216, 616 213, 622 210,
+   629 207, 637 205, 645 203, 655 202, 664 201, 674 201, 684 201, 694 201, 705 202, 715 204,
+   725 206, 735 209, 745 211, 755 215, 764 218, 772 222, 781 226, 789 230, 796 235, 803 239,
+   809 244, 815 249, 820 253, 825 258, 830 263, 834 267, 837 271, 840 275, 843 279, 845 283,
+   847 287, 849 290, 850 293, 851 295, 852 298, 852 300, 853 301, 853 303, 853 304, 853 304,
+   853 304, 853 304, 853 304, 853 303, 854 301, 854 300, 854 298, 855 295, 856 293, 857 290,
+   859 287, 861 283, 863 279, 866 275, 869 271, 873 267, 876 263, 881 258, 886 253, 891 249,
+   897 244, 903 239, 910 235, 918 230, 926 226, 934 222, 942 218, 952 215, 961 211, 971 209,
+   981 206, 991 204, 1001 202, 1012 201, 1022 201, 1032 201, 1042 201, 1052 202, 1061 203, 1069 205,
+   1077 207, 1084 210, 1090 213, 1095 216, 1099 219, 1102 221, 1104 224, 1106 226, 1106 228, 1107 229,
+   1107 229" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="92" cy="229" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="92" cy="229" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="93" cy="228" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="93" cy="226" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="95" cy="224" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="97" cy="221" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="100" cy="219" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="104" cy="216" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="109" cy="213" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="115" cy="210" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="122" cy="207" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="130" cy="205" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="138" cy="203" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="147" cy="202" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="157" cy="201" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="167" cy="201" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="177" cy="201" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="187" cy="201" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="198" cy="202" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="208" cy="204" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="218" cy="206" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="228" cy="209" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="238" cy="211" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="247" cy="215" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="257" cy="218" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="265" cy="222" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="273" cy="226" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="281" cy="230" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="289" cy="235" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="296" cy="239" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="302" cy="244" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="308" cy="249" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="313" cy="253" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="318" cy="258" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="323" cy="263" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="326" cy="267" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="330" cy="271" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="333" cy="275" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="336" cy="279" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="338" cy="283" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="340" cy="287" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="342" cy="290" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="343" cy="293" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="344" cy="295" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="345" cy="298" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="345" cy="300" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="345" cy="301" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="346" cy="303" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="346" cy="304" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="346" cy="304" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="346" cy="304" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="346" cy="304" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="346" cy="304" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="346" cy="303" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="346" cy="301" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="347" cy="300" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="347" cy="298" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="348" cy="295" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="349" cy="293" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="350" cy="290" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="352" cy="287" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="354" cy="283" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="356" cy="279" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="359" cy="275" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="362" cy="271" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="365" cy="267" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="369" cy="263" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="374" cy="258" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="379" cy="253" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="384" cy="249" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="390" cy="244" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="396" cy="239" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="403" cy="235" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="410" cy="230" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="418" cy="226" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="427" cy="222" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="435" cy="218" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="444" cy="215" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="454" cy="211" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="464" cy="209" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="474" cy="206" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="484" cy="204" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="494" cy="202" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="505" cy="201" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="515" cy="201" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="525" cy="201" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="535" cy="201" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="544" cy="202" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="554" cy="203" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="562" cy="205" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="570" cy="207" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="577" cy="210" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="583" cy="213" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="588" cy="216" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="592" cy="219" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="595" cy="221" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="597" cy="224" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="598" cy="226" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="599" cy="228" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="599" cy="229" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="599" cy="229" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="600" cy="229" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="600" cy="228" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="601" cy="226" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="602" cy="224" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="604" cy="221" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="607" cy="219" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="611" cy="216" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="616" cy="213" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="622" cy="210" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="629" cy="207" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="637" cy="205" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="645" cy="203" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="655" cy="202" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="664" cy="201" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="674" cy="201" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="684" cy="201" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="694" cy="201" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="705" cy="202" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="715" cy="204" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="725" cy="206" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="735" cy="209" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="745" cy="211" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="755" cy="215" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="764" cy="218" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="772" cy="222" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="781" cy="226" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="789" cy="230" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="796" cy="235" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="803" cy="239" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="809" cy="244" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="815" cy="249" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="820" cy="253" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="825" cy="258" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="830" cy="263" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="834" cy="267" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="837" cy="271" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="840" cy="275" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="843" cy="279" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="845" cy="283" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="847" cy="287" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="849" cy="290" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="850" cy="293" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="851" cy="295" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="852" cy="298" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="852" cy="300" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="853" cy="301" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="853" cy="303" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="853" cy="304" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="853" cy="304" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="853" cy="304" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="853" cy="304" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="853" cy="304" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="853" cy="303" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="854" cy="301" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="854" cy="300" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="854" cy="298" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="855" cy="295" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="856" cy="293" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="857" cy="290" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="859" cy="287" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="861" cy="283" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="863" cy="279" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="866" cy="275" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="869" cy="271" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="873" cy="267" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="876" cy="263" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="881" cy="258" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="886" cy="253" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="891" cy="249" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="897" cy="244" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="903" cy="239" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="910" cy="235" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="918" cy="230" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="926" cy="226" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="934" cy="222" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="942" cy="218" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="952" cy="215" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="961" cy="211" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="971" cy="209" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="981" cy="206" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="991" cy="204" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1001" cy="202" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1012" cy="201" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1022" cy="201" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1032" cy="201" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1042" cy="201" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1052" cy="202" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1061" cy="203" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1069" cy="205" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1077" cy="207" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1084" cy="210" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1090" cy="213" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1095" cy="216" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1099" cy="219" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1102" cy="221" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1104" cy="224" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1106" cy="226" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1106" cy="228" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1107" cy="229" r="3"/>
+<circle class="Numerical_Evolute_Mesh" cx="1107" cy="229" r="3"/>
+<!-- *** End: curves/Trochoid/Numerical_Evolute&ndash;1.0&ndash;0.75&ndash;0.0&ndash;200.svg *** -->
+<!-- **** DRAWING END **** -->
+</svg>
